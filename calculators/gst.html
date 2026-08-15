@@ -1,1 +1,404 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="GST Calculator — free calculator from Chanvika Calculator."><title>GST Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>GST Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Amount (₹)<input id="amount" type="number" inputmode="decimal" step="any" placeholder="e.g. 1000" min="0"></label><label>GST Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 18" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">GST rates depend on the product/service and current rules. Verify the applicable rate before filing or invoicing.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const a=+amount.value,r=+rate.value;if(a<0||r<0){result.textContent='Enter valid values.';return}const g=a*r/100;result.innerHTML=`<b>GST:</b> ₹${g.toFixed(2)}<br><b>Total with GST:</b> ₹${(a+g).toFixed(2)}<br><b>Base if amount includes GST:</b> ₹${(a/(1+r/100)).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Free GST Calculator to calculate GST amount, total price including GST, and base price from a GST-inclusive amount.">
+
+  <title>GST Calculator — Calculate GST Amount & Price | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>GST Calculator</h1>
+
+  <p>
+    Calculate GST amount, total price including GST, and the base price
+    from a GST-inclusive amount.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Amount (₹)
+        <input
+          id="amount"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 1000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        GST Rate (%)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 18"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      GST rates depend on the product/service and applicable rules. Verify
+      the correct GST rate before invoicing, filing or making tax decisions.
+    </p>
+
+  </div>
+
+
+  <!-- What is GST -->
+
+  <section class="content-section">
+
+    <h2>What Is GST?</h2>
+
+    <p>
+      GST stands for <strong>Goods and Services Tax</strong>. It is an
+      indirect tax applied to the supply of many goods and services in India.
+    </p>
+
+    <p>
+      The applicable GST rate can vary depending on the goods or services
+      involved and the applicable tax rules.
+    </p>
+
+  </section>
+
+
+  <!-- GST Formula -->
+
+  <section class="content-section">
+
+    <h2>GST Calculation Formula</h2>
+
+    <p>
+      When the entered amount is the price before GST:
+    </p>
+
+    <p>
+      <strong>
+        GST Amount = Base Amount × GST Rate ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      The price including GST is:
+    </p>
+
+    <p>
+      <strong>
+        Total Price = Base Amount + GST Amount
+      </strong>
+    </p>
+
+    <p>
+      If the entered amount already includes GST, the base amount can be
+      estimated using:
+    </p>
+
+    <p>
+      <strong>
+        Base Amount = GST-Inclusive Amount ÷ (1 + GST Rate ÷ 100)
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>GST Calculation Example</h2>
+
+    <p>
+      Suppose the base price of a product is ₹1,000 and the applicable GST
+      rate is 18%.
+    </p>
+
+    <p>
+      GST = ₹1,000 × 18% =
+      <strong>₹180</strong>
+    </p>
+
+    <p>
+      Total Price = ₹1,000 + ₹180 =
+      <strong>₹1,180</strong>
+    </p>
+
+    <p>
+      Therefore, the customer would pay ₹1,180 if no other charges apply.
+    </p>
+
+  </section>
+
+
+  <!-- Inclusive example -->
+
+  <section class="content-section">
+
+    <h2>How to Calculate GST From an Inclusive Price</h2>
+
+    <p>
+      If a product's final price is ₹1,180 including 18% GST, the estimated
+      base price is:
+    </p>
+
+    <p>
+      ₹1,180 ÷ 1.18 =
+      <strong>₹1,000</strong>
+    </p>
+
+    <p>
+      The GST component is therefore approximately:
+      <strong>₹180</strong>.
+    </p>
+
+  </section>
+
+
+  <!-- CGST SGST -->
+
+  <section class="content-section">
+
+    <h2>CGST and SGST</h2>
+
+    <p>
+      For eligible intra-state supplies, GST may be divided into
+      <strong>CGST</strong> (Central GST) and <strong>SGST</strong>
+      (State GST).
+    </p>
+
+    <p>
+      For example, where an applicable GST rate of 18% is split equally,
+      it may be represented as 9% CGST and 9% SGST.
+    </p>
+
+    <p>
+      The actual tax treatment depends on the nature and location of the
+      supply and applicable rules.
+    </p>
+
+  </section>
+
+
+  <!-- IGST -->
+
+  <section class="content-section">
+
+    <h2>What Is IGST?</h2>
+
+    <p>
+      IGST stands for <strong>Integrated Goods and Services Tax</strong>.
+      It generally applies to eligible inter-state supplies and certain
+      other transactions under India's GST framework.
+    </p>
+
+    <p>
+      Always verify the applicable tax treatment for the specific transaction.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This GST Calculator</h2>
+
+    <ol>
+      <li>Enter the amount.</li>
+      <li>Enter the applicable GST percentage.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the GST amount and total amount including GST.</li>
+      <li>If your entered amount already includes GST, use the displayed base amount as an estimate of the pre-GST amount.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important GST Information</h2>
+
+    <p>
+      This calculator performs a mathematical GST calculation based on the
+      rate entered by the user. It does not determine which GST rate applies
+      to a particular product or service.
+    </p>
+
+    <p>
+      GST rules, rates, exemptions, classification and other tax requirements
+      can change. Businesses should verify the applicable rules before
+      preparing invoices or filing tax returns.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How is GST calculated?</h3>
+
+    <p>
+      GST is calculated by multiplying the taxable base amount by the
+      applicable GST rate and dividing by 100.
+    </p>
+
+
+    <h3>What is 18% GST on ₹1,000?</h3>
+
+    <p>
+      18% GST on ₹1,000 is ₹180. The total including GST is ₹1,180.
+    </p>
+
+
+    <h3>How do I remove GST from an inclusive price?</h3>
+
+    <p>
+      Divide the GST-inclusive amount by 1 plus the GST rate divided by 100.
+      For example, at 18% GST, divide the inclusive amount by 1.18.
+    </p>
+
+
+    <h3>Does this calculator decide the correct GST rate?</h3>
+
+    <p>
+      No. You must enter the applicable GST rate yourself. The calculator
+      does not classify goods or services for tax purposes.
+    </p>
+
+
+    <h3>Is this GST Calculator suitable for invoices?</h3>
+
+    <p>
+      It can be used for quick mathematical calculations, but businesses
+      should verify the applicable GST rate and tax treatment before issuing
+      an official invoice.
+    </p>
+
+
+    <h3>Is this GST Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const amount = document.getElementById('amount');
+const rate = document.getElementById('rate');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const a = Number(amount.value);
+  const r = Number(rate.value);
+
+  if (
+    amount.value === '' ||
+    rate.value === '' ||
+    a <= 0 ||
+    r < 0
+  ) {
+    result.textContent = 'Enter a valid amount and GST rate.';
+    return;
+  }
+
+  const gst = a * r / 100;
+  const total = a + gst;
+
+  let baseIfInclusive = 0;
+
+  if (r === 0) {
+    baseIfInclusive = a;
+  } else {
+    baseIfInclusive = a / (1 + r / 100);
+  }
+
+  result.innerHTML =
+    `<b>GST:</b> ₹${gst.toFixed(2)}<br>` +
+    `<b>Total with GST:</b> ₹${total.toFixed(2)}<br>` +
+    `<b>Base if amount includes GST:</b> ₹${baseIfInclusive.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
