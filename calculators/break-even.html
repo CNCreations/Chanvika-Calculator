@@ -1,1 +1,359 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Break-even Calculator — free calculator from Chanvika Calculator."><title>Break-even Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Break-even Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Fixed Costs (₹)<input id="fixed" type="number" inputmode="decimal" step="any" placeholder="e.g. 10000" min="0"></label><label>Selling Price / Unit (₹)<input id="price" type="number" inputmode="decimal" step="any" placeholder="e.g. 100" min="0"></label><label>Variable Cost / Unit (₹)<input id="variable" type="number" inputmode="decimal" step="any" placeholder="e.g. 60" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const f=+fixed.value,p=+price.value,v=+variable.value;if(f<0||p<=v){result.textContent='Selling price must be greater than variable cost.';return}const q=f/(p-v);result.innerHTML=`<b>Break-even quantity:</b> ${q.toFixed(2)} units<br><b>Approx. units:</b> ${Math.ceil(q)}<br><b>Break-even sales:</b> ₹${(q*p).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Break-even Calculator to find the break-even quantity, approximate units and break-even sales from fixed costs, selling price and variable cost.">
+
+  <title>Break-even Calculator — Calculate Break-even Point | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Break-even Calculator</h1>
+
+  <p>
+    Calculate how many units you need to sell to cover your fixed and
+    variable costs and reach the break-even point.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Fixed Costs (₹)
+        <input
+          id="fixed"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Selling Price / Unit (₹)
+        <input
+          id="price"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Variable Cost / Unit (₹)
+        <input
+          id="variable"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 60"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is break-even -->
+
+  <section class="content-section">
+
+    <h2>What Is the Break-even Point?</h2>
+
+    <p>
+      The break-even point is the level of sales at which your total revenue
+      is equal to your total costs. At this point, the business has neither
+      a profit nor a loss.
+    </p>
+
+    <p>
+      Businesses can use break-even analysis to understand how many products
+      or services they need to sell before they start generating profit.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Break-even Formula</h2>
+
+    <p>
+      The basic break-even quantity formula is:
+    </p>
+
+    <p>
+      <strong>
+        Break-even Units = Fixed Costs ÷ (Selling Price per Unit − Variable Cost per Unit)
+      </strong>
+    </p>
+
+    <p>
+      The difference between selling price and variable cost is known as the
+      contribution per unit.
+    </p>
+
+    <p>
+      <strong>
+        Break-even Sales = Break-even Units × Selling Price per Unit
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Break-even Calculation Example</h2>
+
+    <p>
+      Suppose a small business has fixed costs of ₹10,000. Each product is
+      sold for ₹100 and the variable cost of producing one unit is ₹60.
+    </p>
+
+    <p>
+      Contribution per unit = ₹100 − ₹60 = <strong>₹40</strong>
+    </p>
+
+    <p>
+      Break-even Units = ₹10,000 ÷ ₹40 =
+      <strong>250 units</strong>
+    </p>
+
+    <p>
+      Break-even Sales = 250 × ₹100 =
+      <strong>₹25,000</strong>
+    </p>
+
+    <p>
+      This means the business needs to sell approximately 250 units to cover
+      the stated costs.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Calculator</h2>
+
+    <ol>
+      <li>Enter your total fixed costs.</li>
+      <li>Enter the selling price of one unit.</li>
+      <li>Enter the variable cost of one unit.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Check the break-even quantity and break-even sales.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Costs -->
+
+  <section class="content-section">
+
+    <h2>Fixed Costs vs Variable Costs</h2>
+
+    <h3>Fixed Costs</h3>
+
+    <p>
+      Fixed costs generally remain unchanged over a particular period even
+      when the number of units sold changes. Examples can include rent,
+      certain salaries and some recurring business expenses.
+    </p>
+
+    <h3>Variable Costs</h3>
+
+    <p>
+      Variable costs generally change according to the number of products
+      produced or sold. Examples may include raw materials, packaging and
+      per-unit production costs.
+    </p>
+
+  </section>
+
+
+  <!-- Business use -->
+
+  <section class="content-section">
+
+    <h2>Why Is Break-even Analysis Useful?</h2>
+
+    <ul>
+      <li>Helps estimate the minimum sales volume needed to cover costs.</li>
+      <li>Can help with pricing and sales planning.</li>
+      <li>Helps businesses understand their contribution per unit.</li>
+      <li>Can be useful when planning a new product or business activity.</li>
+      <li>Provides a simple way to understand the relationship between costs, price and sales volume.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What happens after reaching the break-even point?</h3>
+
+    <p>
+      Once revenue exceeds the break-even level, the business can begin
+      generating operating profit, assuming the underlying cost and pricing
+      assumptions remain valid.
+    </p>
+
+
+    <h3>What if the selling price equals the variable cost?</h3>
+
+    <p>
+      If the selling price is equal to the variable cost, there is no
+      contribution available to cover fixed costs, so a normal break-even
+      quantity cannot be calculated.
+    </p>
+
+
+    <h3>What if the variable cost is higher than the selling price?</h3>
+
+    <p>
+      The business loses money on each unit before considering fixed costs.
+      The selling price needs to be greater than the variable cost for this
+      break-even calculation to produce a meaningful result.
+    </p>
+
+
+    <h3>Is break-even sales the same as profit?</h3>
+
+    <p>
+      No. Break-even sales represent the revenue level where total revenue
+      equals total costs. At break-even, profit is zero.
+    </p>
+
+
+    <h3>Can small businesses use break-even analysis?</h3>
+
+    <p>
+      Yes. Break-even analysis can be useful for shops, retailers,
+      manufacturers, service businesses and other small businesses.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const fixed = document.getElementById('fixed');
+const price = document.getElementById('price');
+const variable = document.getElementById('variable');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const f = Number(fixed.value);
+  const p = Number(price.value);
+  const v = Number(variable.value);
+
+  if (
+    fixed.value === '' ||
+    price.value === '' ||
+    variable.value === '' ||
+    f < 0 ||
+    p <= 0 ||
+    v < 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  if (p <= v) {
+    result.textContent =
+      'Selling price must be greater than variable cost.';
+    return;
+  }
+
+  const quantity = f / (p - v);
+  const approximateUnits = Math.ceil(quantity);
+  const breakEvenSales = quantity * p;
+
+  result.innerHTML =
+    `<b>Break-even quantity:</b> ${quantity.toFixed(2)} units<br>` +
+    `<b>Approx. units:</b> ${approximateUnits}<br>` +
+    `<b>Break-even sales:</b> ₹${breakEvenSales.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
