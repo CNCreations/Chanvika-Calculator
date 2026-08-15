@@ -1,1 +1,452 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Electricity Bill Calculator — free calculator from Chanvika Calculator."><title>Electricity Bill Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Electricity Bill Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Units Consumed (kWh)<input id="units" type="number" inputmode="decimal" step="any" placeholder="e.g. 180" min="0"></label><label>Fixed Charge (₹)<input id="fixed" type="number" inputmode="decimal" step="any" placeholder="e.g. 100" min="0"></label><label>First Slab Rate (₹/unit)<input id="rate1" type="number" inputmode="decimal" step="any" placeholder="e.g. 3" min="0"></label><label>First Slab Units<input id="slab1" type="number" inputmode="decimal" step="any" placeholder="e.g. 100" min="0"></label><label>Rate Above First Slab (₹/unit)<input id="rate2" type="number" inputmode="decimal" step="any" placeholder="e.g. 5" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">Tariffs differ by state, DISCOM and consumer category. This is not an official bill.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const u=+units.value,f=+fixed.value,r1=+rate1.value,s=+slab1.value,r2=+rate2.value;if(u<0||f<0||r1<0||s<0||r2<0){result.textContent='Enter valid values.';return}const first=Math.min(u,s),rest=Math.max(0,u-s),energy=first*r1+rest*r2;result.innerHTML=`<b>Energy charge:</b> ₹${energy.toFixed(2)}<br><b>Fixed charge:</b> ₹${f.toFixed(2)}<br><b>Estimated bill:</b> ₹${(energy+f).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Electricity Bill Calculator to estimate an electricity bill from units consumed, fixed charges and slab-based electricity rates.">
+
+  <title>Electricity Bill Calculator — Estimate Your Electricity Bill | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Electricity Bill Calculator</h1>
+
+  <p>
+    Estimate your electricity bill using units consumed, fixed charges and
+    slab-based electricity rates.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Units Consumed (kWh)
+        <input
+          id="units"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 180"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Fixed Charge (₹)
+        <input
+          id="fixed"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100"
+          min="0"
+        >
+      </label>
+
+      <label>
+        First Slab Rate (₹/unit)
+        <input
+          id="rate1"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 3"
+          min="0"
+        >
+      </label>
+
+      <label>
+        First Slab Units
+        <input
+          id="slab1"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Rate Above First Slab (₹/unit)
+        <input
+          id="rate2"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 5"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      Tariffs differ by state, DISCOM and consumer category. This calculator
+      provides an estimate and is not an official electricity bill.
+    </p>
+
+  </div>
+
+
+  <!-- What is electricity bill -->
+
+  <section class="content-section">
+
+    <h2>What Is an Electricity Bill?</h2>
+
+    <p>
+      An electricity bill is generally based on the amount of electricity
+      consumed during a billing period along with applicable fixed charges,
+      taxes, fees and other charges.
+    </p>
+
+    <p>
+      Electricity tariffs can vary depending on your state, electricity
+      distribution company (DISCOM), consumer category and applicable tariff
+      rules.
+    </p>
+
+  </section>
+
+
+  <!-- Units -->
+
+  <section class="content-section">
+
+    <h2>What Does Electricity Consumption Mean?</h2>
+
+    <p>
+      Electricity consumption is commonly measured in kilowatt-hours (kWh),
+      often referred to as units on electricity bills.
+    </p>
+
+    <p>
+      For example, using 1 kilowatt of electrical power continuously for
+      1 hour consumes 1 kWh, or 1 unit of electricity.
+    </p>
+
+  </section>
+
+
+  <!-- Slab system -->
+
+  <section class="content-section">
+
+    <h2>How Does Slab-Based Electricity Billing Work?</h2>
+
+    <p>
+      Some electricity tariffs use different rates for different levels of
+      consumption. A lower rate may apply to consumption within the first
+      slab, while a different rate may apply to units above that slab.
+    </p>
+
+    <p>
+      This calculator uses two rates: one rate for units within the first
+      slab and another rate for units above the first slab.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Electricity Bill Calculation Formula</h2>
+
+    <p>
+      For consumption within the first slab:
+    </p>
+
+    <p>
+      <strong>
+        Energy Charge = Units × First Slab Rate
+      </strong>
+    </p>
+
+    <p>
+      If consumption exceeds the first slab:
+    </p>
+
+    <p>
+      <strong>
+        Energy Charge = First Slab Units × First Rate
+        + Remaining Units × Second Rate
+      </strong>
+    </p>
+
+    <p>
+      The basic estimate produced by this calculator is:
+    </p>
+
+    <p>
+      <strong>
+        Estimated Bill = Energy Charge + Fixed Charge
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Electricity Bill Calculation Example</h2>
+
+    <p>
+      Suppose a household consumes 180 units. Assume the fixed charge is
+      ₹100, the first 100 units cost ₹3 per unit, and units above 100 cost
+      ₹5 per unit.
+    </p>
+
+    <p>
+      First 100 units = 100 × ₹3 =
+      <strong>₹300</strong>
+    </p>
+
+    <p>
+      Remaining 80 units = 80 × ₹5 =
+      <strong>₹400</strong>
+    </p>
+
+    <p>
+      Energy Charge = ₹300 + ₹400 =
+      <strong>₹700</strong>
+    </p>
+
+    <p>
+      Estimated Bill = ₹700 + ₹100 =
+      <strong>₹800</strong>
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Electricity Bill Calculator</h2>
+
+    <ol>
+      <li>Enter the number of electricity units consumed.</li>
+      <li>Enter the applicable fixed charge.</li>
+      <li>Enter the rate for the first slab.</li>
+      <li>Enter the number of units included in the first slab.</li>
+      <li>Enter the rate applicable above the first slab.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Review the estimated energy charge and total estimated bill.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important: Your Actual Bill May Be Different</h2>
+
+    <p>
+      This calculator provides a simple estimate based on the rates and
+      charges entered by the user. Actual electricity bills can include
+      additional components such as taxes, subsidies, fuel adjustment
+      charges, meter charges, government levies and other applicable fees.
+    </p>
+
+    <p>
+      Tariffs and billing rules can also change over time. Always check your
+      latest official tariff information and electricity bill for the exact
+      amount payable.
+    </p>
+
+  </section>
+
+
+  <!-- Saving electricity -->
+
+  <section class="content-section">
+
+    <h2>Ways to Reduce Electricity Consumption</h2>
+
+    <ul>
+      <li>Switch off appliances when they are not being used.</li>
+      <li>Use energy-efficient lighting and appliances where practical.</li>
+      <li>Avoid leaving devices on standby unnecessarily.</li>
+      <li>Use air conditioners and coolers efficiently.</li>
+      <li>Monitor monthly electricity consumption to identify unusual increases.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is one unit of electricity?</h3>
+
+    <p>
+      One unit of electricity generally refers to one kilowatt-hour (kWh)
+      of electricity consumption.
+    </p>
+
+
+    <h3>Why can my actual electricity bill be higher than the calculator result?</h3>
+
+    <p>
+      The actual bill may include additional charges, taxes, subsidies,
+      adjustments or fees that are not included in this simple calculator.
+    </p>
+
+
+    <h3>Does every state use the same electricity tariff?</h3>
+
+    <p>
+      No. Electricity tariffs can vary by state, DISCOM, consumer category
+      and applicable tariff structure.
+    </p>
+
+
+    <h3>Can I use this calculator for a household electricity bill?</h3>
+
+    <p>
+      Yes. You can use it for a basic household estimate when you know the
+      applicable rates and fixed charges.
+    </p>
+
+
+    <h3>Is this an official electricity bill calculator?</h3>
+
+    <p>
+      No. This is an independent estimation tool. It does not generate an
+      official electricity bill and should not be treated as an exact billing
+      statement.
+    </p>
+
+
+    <h3>Is this Electricity Bill Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const units = document.getElementById('units');
+const fixed = document.getElementById('fixed');
+const rate1 = document.getElementById('rate1');
+const slab1 = document.getElementById('slab1');
+const rate2 = document.getElementById('rate2');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const u = Number(units.value);
+  const f = Number(fixed.value);
+  const r1 = Number(rate1.value);
+  const s = Number(slab1.value);
+  const r2 = Number(rate2.value);
+
+  if (
+    units.value === '' ||
+    fixed.value === '' ||
+    rate1.value === '' ||
+    slab1.value === '' ||
+    rate2.value === '' ||
+    u < 0 ||
+    f < 0 ||
+    r1 < 0 ||
+    s < 0 ||
+    r2 < 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  const firstUnits = Math.min(u, s);
+  const remainingUnits = Math.max(0, u - s);
+
+  const energyCharge =
+    firstUnits * r1 +
+    remainingUnits * r2;
+
+  const estimatedBill =
+    energyCharge + f;
+
+  result.innerHTML =
+    `<b>Energy charge:</b> ₹${energyCharge.toFixed(2)}<br>` +
+    `<b>Fixed charge:</b> ₹${f.toFixed(2)}<br>` +
+    `<b>Estimated bill:</b> ₹${estimatedBill.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
