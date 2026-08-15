@@ -1,8 +1,0 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GST Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head>
-<body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><span class="tagline">Smart Calculators for Everyday India</span></div></header>
-<main><section class="container calculators-section"><p><a href="../index.html">← All calculators</a></p><h1>GST Calculator</h1>
-<div class="calculator-box"><div class="fields"><label>Amount (₹)<input id="amount" type="number" inputmode="decimal" step="any" placeholder="e.g. 1000"></label><label>GST Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 18"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div>
-</section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator</div></footer>
-<script>document.getElementById('calculate').onclick=()=>{const a=+amount.value,r=+rate.value;if(a<0||r<0){result.textContent='Enter valid values.';return}const g=a*r/100;result.innerHTML=`<b>GST amount:</b> ₹${g.toFixed(2)}<br><b>Total including GST:</b> ₹${(a+g).toFixed(2)}`;};</script></body></html>
