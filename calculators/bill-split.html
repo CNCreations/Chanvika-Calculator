@@ -75,16 +75,16 @@
       </label>
 
       <label>
-        Tip (%)
-        <input
-          id="tip"
-          type="number"
-          inputmode="decimal"
-          step="any"
-          placeholder="e.g. 10"
-          min="0"
-        >
-      </label>
+  Tip (₹)
+  <input
+    id="tip"
+    type="number"
+    inputmode="decimal"
+    step="any"
+    placeholder="e.g. 200"
+    min="0"
+  >
+</label>
 
       <label>
         Number of People
@@ -158,7 +158,7 @@
     </p>
 
     <p>
-      <strong>Tip = Bill Amount × Tip Rate ÷ 100</strong>
+      <strong>Tip = Entered Tip Amount</strong>
     </p>
 
     <p>
@@ -211,7 +211,7 @@
     <ol>
       <li>Enter the total bill amount.</li>
       <li>Enter the applicable tax or service charge percentage.</li>
-      <li>Enter the tip percentage, if applicable.</li>
+      <li>Enter the tip amount, if applicable.</li>
       <li>Enter the number of people sharing the bill.</li>
       <li>Click <strong>Calculate</strong>.</li>
       <li>Check the total bill and amount payable per person.</li>
@@ -336,7 +336,7 @@ document.getElementById('calculate').onclick = () => {
   }
 
   const taxAmount = b * t / 100;
-  const tipAmount = b * ti / 100;
+  const tipAmount = ti;
   const total = b + taxAmount + tipAmount;
   const perPerson = total / p;
 
