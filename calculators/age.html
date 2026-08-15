@@ -1,1 +1,293 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Age Calculator — calculate age from date of birth."><title>Age Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Age Calculator</h1><p>Calculate completed years, months and days between a date of birth and a chosen date.</p><div class="calculator-box"><div class="fields"><label>Date of Birth<input id="dob" type="date"></label><label>Calculate Age On<input id="ondate" type="date"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>const dob=document.getElementById('dob'),ondate=document.getElementById('ondate'),result=document.getElementById('result');ondate.value=new Date().toISOString().slice(0,10);document.getElementById('calculate').onclick=()=>{if(!dob.value||!ondate.value){result.textContent='Select both dates.';return}const d=new Date(dob.value+'T00:00:00'),o=new Date(ondate.value+'T00:00:00');if(d>o){result.textContent='Date of birth cannot be after the calculation date.';return}let y=o.getFullYear()-d.getFullYear(),m=o.getMonth()-d.getMonth(),day=o.getDate()-d.getDate();if(day<0){m--;day+=new Date(o.getFullYear(),o.getMonth(),0).getDate()}if(m<0){y--;m+=12}result.innerHTML=`<b>Age:</b> ${y} years, ${m} months, ${day} days`}</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Age Calculator to calculate completed years, months and days between a date of birth and any chosen date.">
+
+  <title>Age Calculator — Calculate Your Exact Age | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Age Calculator</h1>
+
+  <p>
+    Calculate your exact completed age in years, months and days using your
+    date of birth and a chosen calculation date.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Date of Birth
+        <input id="dob" type="date">
+      </label>
+
+      <label>
+        Calculate Age On
+        <input id="ondate" type="date">
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is age -->
+
+  <section class="content-section">
+
+    <h2>What Is an Age Calculator?</h2>
+
+    <p>
+      An age calculator helps you find the completed age of a person from
+      their date of birth up to a selected date. Instead of manually
+      counting the years, months and days between two dates, this calculator
+      performs the calculation automatically.
+    </p>
+
+    <p>
+      You can use it to calculate your current age or find out how old
+      someone will be on a particular date.
+    </p>
+
+  </section>
+
+
+  <!-- How it works -->
+
+  <section class="content-section">
+
+    <h2>How Does the Age Calculator Work?</h2>
+
+    <p>
+      The calculator compares the date of birth with the selected calculation
+      date. It determines the completed years first and then calculates the
+      remaining months and days.
+    </p>
+
+    <p>
+      The calculation takes the different lengths of months into account,
+      including February and leap years.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Age Calculation Example</h2>
+
+    <p>
+      Suppose a person was born on <strong>15 January 2000</strong> and the
+      calculation date is <strong>15 August 2026</strong>.
+    </p>
+
+    <p>
+      Their completed age would be:
+    </p>
+
+    <p>
+      <strong>26 years, 7 months, 0 days</strong>
+    </p>
+
+    <p>
+      You can use the calculator above to calculate the age between any
+      two dates.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Age Calculator</h2>
+
+    <ol>
+      <li>Enter the person's date of birth.</li>
+      <li>Select the date on which you want to calculate the age.</li>
+      <li>Click the <strong>Calculate</strong> button.</li>
+      <li>View the completed age in years, months and days.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Uses -->
+
+  <section class="content-section">
+
+    <h2>What Can You Use an Age Calculator For?</h2>
+
+    <ul>
+      <li>Checking your current age.</li>
+      <li>Calculating someone's age on a specific date.</li>
+      <li>Checking age eligibility for applications or events.</li>
+      <li>Calculating age for birthdays and personal records.</li>
+      <li>Finding the exact difference between a birth date and another date.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Can I calculate my age on a future date?</h3>
+
+    <p>
+      Yes. Select your date of birth and then choose any future date in the
+      "Calculate Age On" field.
+    </p>
+
+
+    <h3>Does the calculator show age in months and days?</h3>
+
+    <p>
+      Yes. The calculator displays completed years, months and days between
+      the two selected dates.
+    </p>
+
+
+    <h3>Does the calculator account for leap years?</h3>
+
+    <p>
+      Yes. The date calculation uses the calendar dates and accounts for
+      differences in month lengths, including leap years.
+    </p>
+
+
+    <h3>What happens if the date of birth is after the calculation date?</h3>
+
+    <p>
+      The calculator will show an error because the date of birth cannot be
+      later than the date on which the age is being calculated.
+    </p>
+
+
+    <h3>Is this calculator free?</h3>
+
+    <p>
+      Yes. The Age Calculator is free to use.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const dob = document.getElementById('dob');
+const ondate = document.getElementById('ondate');
+const result = document.getElementById('result');
+
+ondate.value = new Date().toISOString().slice(0, 10);
+
+document.getElementById('calculate').onclick = () => {
+
+  if (!dob.value || !ondate.value) {
+    result.textContent = 'Select both dates.';
+    return;
+  }
+
+  const d = new Date(dob.value + 'T00:00:00');
+  const o = new Date(ondate.value + 'T00:00:00');
+
+  if (d > o) {
+    result.textContent =
+      'Date of birth cannot be after the calculation date.';
+    return;
+  }
+
+  let y = o.getFullYear() - d.getFullYear();
+  let m = o.getMonth() - d.getMonth();
+  let day = o.getDate() - d.getDate();
+
+  if (day < 0) {
+    m--;
+    day += new Date(
+      o.getFullYear(),
+      o.getMonth(),
+      0
+    ).getDate();
+  }
+
+  if (m < 0) {
+    y--;
+    m += 12;
+  }
+
+  result.innerHTML =
+    `<b>Age:</b> ${y} years, ${m} months, ${day} days`;
+
+};
+
+</script>
+
+</body>
+</html>
