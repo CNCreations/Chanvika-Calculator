@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Break-even Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><span class="tagline">Smart Calculators for Everyday India</span></div></header>
+<main><section class="container calculators-section"><p><a href="../index.html">← All calculators</a></p><h1>Break-even Calculator</h1>
+<div class="calculator-box"><div class="fields"><label>Fixed Costs (₹)<input id="fixed" type="number" inputmode="decimal" step="any" placeholder="e.g. 10000"></label><label>Selling Price / Unit (₹)<input id="price" type="number" inputmode="decimal" step="any" placeholder="e.g. 100"></label><label>Variable Cost / Unit (₹)<input id="variable" type="number" inputmode="decimal" step="any" placeholder="e.g. 60"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div>
+</section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator</div></footer>
+<script>document.getElementById('calculate').onclick=()=>{const f=+fixed.value,p=+price.value,v=+variable.value;if(f<0||p<=v){result.textContent='Selling price must be greater than variable cost.';return}const q=f/(p-v);result.innerHTML=`<b>Break-even quantity:</b> ${q.toFixed(2)} units<br><b>Approx. units to sell:</b> ${Math.ceil(q)} units`;};</script></body></html>

@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Markup Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head>
+<body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><span class="tagline">Smart Calculators for Everyday India</span></div></header>
+<main><section class="container calculators-section"><p><a href="../index.html">← All calculators</a></p><h1>Markup Calculator</h1>
+<div class="calculator-box"><div class="fields"><label>Cost Price (₹)<input id="cost" type="number" inputmode="decimal" step="any" placeholder="e.g. 500"></label><label>Markup (%)<input id="markup" type="number" inputmode="decimal" step="any" placeholder="e.g. 30"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div>
+</section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator</div></footer>
+<script>document.getElementById('calculate').onclick=()=>{const c=+cost.value,m=+markup.value;if(c<0||m<0){result.textContent='Enter valid values.';return}const a=c*m/100,s=c+a;result.innerHTML=`<b>Markup amount:</b> ₹${a.toFixed(2)}<br><b>Selling price:</b> ₹${s.toFixed(2)}`;};</script></body></html>
