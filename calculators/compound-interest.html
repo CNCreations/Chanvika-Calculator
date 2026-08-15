@@ -1,1 +1,401 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Compound Interest Calculator — free calculator from Chanvika Calculator."><title>Compound Interest Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Compound Interest Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Principal (₹)<input id="principal" type="number" inputmode="decimal" step="any" placeholder="e.g. 10000" min="0"></label><label>Annual Interest Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 8" min="0"></label><label>Time (years)<input id="years" type="number" inputmode="decimal" step="any" placeholder="e.g. 5" min="0"></label><label>Compounding periods/year<input id="frequency" type="number" inputmode="decimal" step="1" placeholder="e.g. 12" min="1"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const p=+principal.value,r=+rate.value,t=+years.value,n=+frequency.value;if(p<0||r<0||t<0||n<=0){result.textContent='Enter valid values.';return}const a=p*Math.pow(1+r/100/n,n*t);result.innerHTML=`<b>Compound interest:</b> ₹${(a-p).toFixed(2)}<br><b>Future value:</b> ₹${a.toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Compound Interest Calculator to calculate compound interest and future value based on principal, interest rate, time and compounding frequency.">
+
+  <title>Compound Interest Calculator — Calculate Future Value | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Compound Interest Calculator</h1>
+
+  <p>
+    Calculate compound interest and the future value of an investment or
+    principal amount using the interest rate, time and compounding frequency.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Principal (₹)
+        <input
+          id="principal"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Annual Interest Rate (%)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 8"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Time (years)
+        <input
+          id="years"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 5"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Compounding Periods / Year
+        <input
+          id="frequency"
+          type="number"
+          inputmode="numeric"
+          step="1"
+          placeholder="e.g. 12"
+          min="1"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is compound interest -->
+
+  <section class="content-section">
+
+    <h2>What Is Compound Interest?</h2>
+
+    <p>
+      Compound interest is interest calculated on the original principal as
+      well as the interest accumulated during previous periods.
+    </p>
+
+    <p>
+      Because previously earned interest can also generate interest,
+      compound growth can become significant over longer periods.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Compound Interest Formula</h2>
+
+    <p>
+      The standard compound interest formula is:
+    </p>
+
+    <p>
+      <strong>
+        A = P × (1 + r / n)<sup>nt</sup>
+      </strong>
+    </p>
+
+    <p>Where:</p>
+
+    <ul>
+      <li><strong>A</strong> = Future value</li>
+      <li><strong>P</strong> = Principal amount</li>
+      <li><strong>r</strong> = Annual interest rate as a decimal</li>
+      <li><strong>n</strong> = Number of compounding periods per year</li>
+      <li><strong>t</strong> = Time in years</li>
+    </ul>
+
+    <p>
+      Compound interest can then be calculated as:
+    </p>
+
+    <p>
+      <strong>Compound Interest = Future Value − Principal</strong>
+    </p>
+
+  </section>
+
+
+  <!-- Frequency -->
+
+  <section class="content-section">
+
+    <h2>What Does Compounding Frequency Mean?</h2>
+
+    <p>
+      Compounding frequency tells you how many times interest is added to the
+      balance during one year.
+    </p>
+
+    <ul>
+      <li>Annually = 1 time per year</li>
+      <li>Semi-annually = 2 times per year</li>
+      <li>Quarterly = 4 times per year</li>
+      <li>Monthly = 12 times per year</li>
+      <li>Daily = 365 times per year</li>
+    </ul>
+
+    <p>
+      The actual compounding frequency depends on the financial product or
+      agreement being considered.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Compound Interest Example</h2>
+
+    <p>
+      Suppose you invest ₹10,000 at an annual interest rate of 8% for
+      5 years, compounded monthly.
+    </p>
+
+    <p>
+      Principal = <strong>₹10,000</strong>
+    </p>
+
+    <p>
+      Annual Interest Rate = <strong>8%</strong>
+    </p>
+
+    <p>
+      Time = <strong>5 years</strong>
+    </p>
+
+    <p>
+      Compounding = <strong>12 times per year</strong>
+    </p>
+
+    <p>
+      Using the compound interest formula, the future value is approximately
+      <strong>₹14,898.33</strong>.
+    </p>
+
+    <p>
+      The approximate compound interest earned is
+      <strong>₹4,898.33</strong>.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Calculator</h2>
+
+    <ol>
+      <li>Enter the initial principal amount.</li>
+      <li>Enter the annual interest rate.</li>
+      <li>Enter the investment or borrowing period in years.</li>
+      <li>Enter how many times interest compounds per year.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the estimated compound interest and future value.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Compound vs simple -->
+
+  <section class="content-section">
+
+    <h2>Compound Interest vs Simple Interest</h2>
+
+    <p>
+      With simple interest, interest is calculated only on the original
+      principal. With compound interest, accumulated interest can also become
+      part of the amount on which future interest is calculated.
+    </p>
+
+    <p>
+      Therefore, over longer periods, compound interest can produce a larger
+      future value than simple interest when the other assumptions are the same.
+    </p>
+
+  </section>
+
+
+  <!-- Important points -->
+
+  <section class="content-section">
+
+    <h2>Important Things to Remember</h2>
+
+    <ul>
+      <li>The calculator provides a mathematical estimate based on the values entered.</li>
+      <li>Actual investment returns may differ because of taxes, fees, changing rates or other conditions.</li>
+      <li>Higher compounding frequency can affect the calculated future value.</li>
+      <li>Inflation can reduce the purchasing power of money over time.</li>
+      <li>Always check the actual terms of a financial product before making financial decisions.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is the difference between interest and future value?</h3>
+
+    <p>
+      Interest is the amount earned over the principal, while future value
+      represents the principal plus the accumulated interest.
+    </p>
+
+
+    <h3>Does compound interest increase faster over time?</h3>
+
+    <p>
+      Compound growth can accelerate over time because accumulated interest
+      can itself earn additional interest.
+    </p>
+
+
+    <h3>What does monthly compounding mean?</h3>
+
+    <p>
+      Monthly compounding means interest is applied 12 times during a year.
+      Enter 12 in the compounding periods per year field.
+    </p>
+
+
+    <h3>Can I use a decimal interest rate?</h3>
+
+    <p>
+      Yes. You can enter rates such as 7.5% or 8.25%.
+    </p>
+
+
+    <h3>Is this Compound Interest Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const principal = document.getElementById('principal');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+const frequency = document.getElementById('frequency');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const p = Number(principal.value);
+  const r = Number(rate.value);
+  const t = Number(years.value);
+  const n = Number(frequency.value);
+
+  if (
+    principal.value === '' ||
+    rate.value === '' ||
+    years.value === '' ||
+    frequency.value === '' ||
+    p <= 0 ||
+    r < 0 ||
+    t < 0 ||
+    n <= 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  const futureValue =
+    p * Math.pow(1 + r / 100 / n, n * t);
+
+  const compoundInterest =
+    futureValue - p;
+
+  result.innerHTML =
+    `<b>Compound interest:</b> ₹${compoundInterest.toFixed(2)}<br>` +
+    `<b>Future value:</b> ₹${futureValue.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
