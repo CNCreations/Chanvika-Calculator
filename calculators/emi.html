@@ -1,1 +1,406 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="EMI Calculator — free calculator from Chanvika Calculator."><title>EMI Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>EMI Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Loan Amount (₹)<input id="principal" type="number" inputmode="decimal" step="any" placeholder="e.g. 500000" min="0"></label><label>Annual Interest Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 9" min="0"></label><label>Loan Tenure (months)<input id="months" type="number" inputmode="decimal" step="1" placeholder="e.g. 60" min="1"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">This is an estimate. Actual lender calculations can include fees, insurance, taxes and different rate terms.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const p=+principal.value,r=+rate.value,n=+months.value;if(p<=0||r<0||n<=0){result.textContent='Enter valid loan details.';return}const m=r/1200,emi=m===0?p/n:p*m*Math.pow(1+m,n)/(Math.pow(1+m,n)-1),total=emi*n;result.innerHTML=`<b>Monthly EMI:</b> ₹${emi.toFixed(2)}<br><b>Total interest:</b> ₹${(total-p).toFixed(2)}<br><b>Total repayment:</b> ₹${total.toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free EMI Calculator to calculate monthly loan EMI, total interest and total repayment based on loan amount, interest rate and tenure.">
+
+  <title>EMI Calculator — Calculate Monthly Loan EMI | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>EMI Calculator</h1>
+
+  <p>
+    Calculate your estimated monthly loan EMI, total interest and total
+    repayment using the loan amount, annual interest rate and loan tenure.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Loan Amount (₹)
+        <input
+          id="principal"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 500000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Annual Interest Rate (%)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 9"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Loan Tenure (months)
+        <input
+          id="months"
+          type="number"
+          inputmode="numeric"
+          step="1"
+          placeholder="e.g. 60"
+          min="1"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      This is an estimate. Actual lender calculations may include processing
+      fees, insurance, taxes, other charges and different interest-rate terms.
+    </p>
+
+  </div>
+
+
+  <!-- What is EMI -->
+
+  <section class="content-section">
+
+    <h2>What Is EMI?</h2>
+
+    <p>
+      EMI stands for <strong>Equated Monthly Instalment</strong>. It is the
+      regular amount a borrower pays towards a loan, usually every month,
+      during the repayment period.
+    </p>
+
+    <p>
+      A typical EMI consists of both principal repayment and interest.
+      The proportion of principal and interest changes during the loan
+      tenure.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>EMI Formula</h2>
+
+    <p>
+      For a standard reducing-balance loan, the EMI can be calculated using:
+    </p>
+
+    <p>
+      <strong>
+        EMI = P × r × (1 + r)<sup>n</sup> ÷
+        ((1 + r)<sup>n</sup> − 1)
+      </strong>
+    </p>
+
+    <p>Where:</p>
+
+    <ul>
+      <li><strong>P</strong> = Loan principal</li>
+      <li><strong>r</strong> = Monthly interest rate</li>
+      <li><strong>n</strong> = Number of monthly instalments</li>
+    </ul>
+
+    <p>
+      The annual interest rate is converted into a monthly rate before
+      applying the formula.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>EMI Calculation Example</h2>
+
+    <p>
+      Suppose you take a loan of ₹5,00,000 at an annual interest rate of 9%
+      for 60 months.
+    </p>
+
+    <p>
+      Loan Amount = <strong>₹5,00,000</strong>
+    </p>
+
+    <p>
+      Interest Rate = <strong>9% per year</strong>
+    </p>
+
+    <p>
+      Tenure = <strong>60 months</strong>
+    </p>
+
+    <p>
+      The estimated monthly EMI is approximately
+      <strong>₹10,379.65</strong>.
+    </p>
+
+    <p>
+      The estimated total interest over the full tenure is approximately
+      <strong>₹1,22,779.00</strong>.
+    </p>
+
+    <p>
+      The estimated total repayment is approximately
+      <strong>₹6,22,779.00</strong>.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This EMI Calculator</h2>
+
+    <ol>
+      <li>Enter the amount you want to borrow.</li>
+      <li>Enter the annual interest rate.</li>
+      <li>Enter the loan tenure in months.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the estimated monthly EMI, total interest and total repayment.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Factors -->
+
+  <section class="content-section">
+
+    <h2>What Affects Your EMI?</h2>
+
+    <ul>
+      <li><strong>Loan amount:</strong> A larger loan generally results in a higher EMI.</li>
+      <li><strong>Interest rate:</strong> A higher interest rate generally increases the EMI.</li>
+      <li><strong>Loan tenure:</strong> A longer tenure can reduce the monthly EMI but may increase total interest paid.</li>
+      <li><strong>Repayment structure:</strong> Different loan products may use different calculation methods.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Tenure -->
+
+  <section class="content-section">
+
+    <h2>Shorter vs Longer Loan Tenure</h2>
+
+    <p>
+      A shorter loan tenure generally means higher monthly payments but can
+      reduce the total interest paid over the life of the loan.
+    </p>
+
+    <p>
+      A longer tenure generally reduces the monthly EMI, but the total
+      interest paid may be higher because the loan remains outstanding for
+      a longer period.
+    </p>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important Information</h2>
+
+    <p>
+      This calculator provides a mathematical estimate based on the values
+      entered. The actual EMI offered by a lender may differ.
+    </p>
+
+    <p>
+      Actual loan costs may also include processing fees, insurance,
+      taxes, penalties, prepayment charges or other applicable costs.
+    </p>
+
+    <p>
+      Always review the lender's official loan agreement and repayment
+      schedule before making a financial decision.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What does EMI stand for?</h3>
+
+    <p>
+      EMI stands for Equated Monthly Instalment. It is the regular payment
+      made towards a loan.
+    </p>
+
+
+    <h3>Does a longer tenure reduce EMI?</h3>
+
+    <p>
+      Generally, a longer repayment tenure reduces the monthly EMI, but it
+      can result in more total interest being paid over the entire loan.
+    </p>
+
+
+    <h3>Does a higher interest rate increase EMI?</h3>
+
+    <p>
+      Yes. Assuming the loan amount and tenure remain the same, a higher
+      interest rate generally results in a higher EMI and higher total
+      interest.
+    </p>
+
+
+    <h3>Can I calculate EMI for a home loan or personal loan?</h3>
+
+    <p>
+      Yes. This calculator can be used for loans that follow a standard
+      reducing-balance EMI calculation.
+    </p>
+
+
+    <h3>What happens if the interest rate is 0%?</h3>
+
+    <p>
+      If the interest rate is 0%, the loan amount is simply divided by the
+      number of monthly instalments.
+    </p>
+
+
+    <h3>Is this EMI Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const principal = document.getElementById('principal');
+const rate = document.getElementById('rate');
+const months = document.getElementById('months');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const p = Number(principal.value);
+  const r = Number(rate.value);
+  const n = Number(months.value);
+
+  if (
+    principal.value === '' ||
+    rate.value === '' ||
+    months.value === '' ||
+    p <= 0 ||
+    r < 0 ||
+    n <= 0
+  ) {
+    result.textContent = 'Enter valid loan details.';
+    return;
+  }
+
+  const monthlyRate = r / 1200;
+
+  let emi;
+
+  if (monthlyRate === 0) {
+    emi = p / n;
+  } else {
+    emi =
+      p *
+      monthlyRate *
+      Math.pow(1 + monthlyRate, n) /
+      (Math.pow(1 + monthlyRate, n) - 1);
+  }
+
+  const totalRepayment = emi * n;
+  const totalInterest = totalRepayment - p;
+
+  result.innerHTML =
+    `<b>Monthly EMI:</b> ₹${emi.toFixed(2)}<br>` +
+    `<b>Total interest:</b> ₹${totalInterest.toFixed(2)}<br>` +
+    `<b>Total repayment:</b> ₹${totalRepayment.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
