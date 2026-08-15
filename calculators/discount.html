@@ -1,1 +1,327 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Discount Calculator — free calculator from Chanvika Calculator."><title>Discount Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Discount Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Original Price (₹)<input id="price" type="number" inputmode="decimal" step="any" placeholder="e.g. 1000" min="0"></label><label>Discount (%)<input id="discount" type="number" inputmode="decimal" step="any" placeholder="e.g. 20" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const p=+price.value,d=+discount.value;if(p<0||d<0||d>100){result.textContent='Enter a discount between 0% and 100%.';return}const a=p*d/100;result.innerHTML=`<b>Discount:</b> ₹${a.toFixed(2)}<br><b>Final price:</b> ₹${(p-a).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Discount Calculator to calculate discount amount and final selling price after a percentage discount.">
+
+  <title>Discount Calculator — Calculate Sale Price After Discount | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Discount Calculator</h1>
+
+  <p>
+    Calculate the discount amount and final price after applying a percentage
+    discount to an original price.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Original Price (₹)
+        <input
+          id="price"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 1000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Discount (%)
+        <input
+          id="discount"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 20"
+          min="0"
+          max="100"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is discount -->
+
+  <section class="content-section">
+
+    <h2>What Is a Discount?</h2>
+
+    <p>
+      A discount is a reduction from the original price of a product or
+      service. Discounts are commonly offered during sales, promotions,
+      festivals, clearance events and special offers.
+    </p>
+
+    <p>
+      A percentage discount tells you how much of the original price is
+      reduced.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Discount Formula</h2>
+
+    <p>
+      The discount amount can be calculated using:
+    </p>
+
+    <p>
+      <strong>
+        Discount Amount = Original Price × Discount Percentage ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      The final price is:
+    </p>
+
+    <p>
+      <strong>
+        Final Price = Original Price − Discount Amount
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Discount Calculation Example</h2>
+
+    <p>
+      Suppose a product has an original price of ₹1,000 and a discount of 20%.
+    </p>
+
+    <p>
+      Discount Amount = ₹1,000 × 20% =
+      <strong>₹200</strong>
+    </p>
+
+    <p>
+      Final Price = ₹1,000 − ₹200 =
+      <strong>₹800</strong>
+    </p>
+
+    <p>
+      Therefore, after a 20% discount, you would pay ₹800.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Discount Calculator</h2>
+
+    <ol>
+      <li>Enter the original price of the product or service.</li>
+      <li>Enter the discount percentage.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the discount amount and final price.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Shopping -->
+
+  <section class="content-section">
+
+    <h2>How to Calculate a Sale Price</h2>
+
+    <p>
+      When a shop offers a percentage discount, first calculate the discount
+      amount and then subtract it from the original price.
+    </p>
+
+    <p>
+      For example, a ₹2,500 product with a 15% discount has a discount amount
+      of ₹375. The final price would therefore be ₹2,125.
+    </p>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Things to Check Before Accepting a Discount</h2>
+
+    <ul>
+      <li>Check the original price before applying the discount.</li>
+      <li>Confirm whether the advertised discount applies to the product you want.</li>
+      <li>Check whether taxes or other charges are added separately.</li>
+      <li>Compare the final price with other sellers when appropriate.</li>
+      <li>Some offers may have minimum purchase requirements or other conditions.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How do I calculate a percentage discount?</h3>
+
+    <p>
+      Multiply the original price by the discount percentage and divide the
+      result by 100.
+    </p>
+
+
+    <h3>What is 20% off ₹1,000?</h3>
+
+    <p>
+      A 20% discount on ₹1,000 is ₹200, making the final price ₹800.
+    </p>
+
+
+    <h3>Can the discount be 100%?</h3>
+
+    <p>
+      Yes. A 100% discount means the calculated final price is ₹0, assuming
+      no additional charges apply.
+    </p>
+
+
+    <h3>Can I enter a decimal discount?</h3>
+
+    <p>
+      Yes. You can enter values such as 12.5% if the offer uses a decimal
+      percentage.
+    </p>
+
+
+    <h3>Does this calculator include GST or other taxes?</h3>
+
+    <p>
+      No. This calculator only applies the discount to the original price.
+      Taxes, fees or other charges should be considered separately if applicable.
+    </p>
+
+
+    <h3>Is this Discount Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const price = document.getElementById('price');
+const discount = document.getElementById('discount');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const p = Number(price.value);
+  const d = Number(discount.value);
+
+  if (
+    price.value === '' ||
+    discount.value === '' ||
+    p <= 0 ||
+    d < 0 ||
+    d > 100
+  ) {
+    result.textContent =
+      'Enter a valid price and a discount between 0% and 100%.';
+    return;
+  }
+
+  const discountAmount = p * d / 100;
+  const finalPrice = p - discountAmount;
+
+  result.innerHTML =
+    `<b>Discount:</b> ₹${discountAmount.toFixed(2)}<br>` +
+    `<b>Final price:</b> ₹${finalPrice.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
