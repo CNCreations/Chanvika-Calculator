@@ -1,1 +1,298 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Profit Margin Calculator — free calculator from Chanvika Calculator."><title>Profit Margin Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Profit Margin Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Cost Price (₹)<input id="cost" type="number" inputmode="decimal" step="any" placeholder="e.g. 500" min="0"></label><label>Selling Price (₹)<input id="selling" type="number" inputmode="decimal" step="any" placeholder="e.g. 700" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">Profit margin is calculated against selling price. A negative profit means a loss.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const c=+cost.value,s=+selling.value;if(c<=0||s<0){result.textContent='Enter valid prices.';return}const p=s-c,m=s?p/s*100:0;result.innerHTML=`<b>Profit/Loss:</b> ₹${p.toFixed(2)}<br><b>Profit margin:</b> ${m.toFixed(2)}%`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use our free Profit Margin Calculator to calculate profit or loss and profit margin from cost price and selling price.">
+
+  <title>Profit Margin Calculator — Calculate Profit % | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html">Chanvika Calculator</a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Profit Margin Calculator</h1>
+
+  <p>
+    Calculate your profit or loss and profit margin instantly using the cost price
+    and selling price of a product or service.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Cost Price (₹)
+        <input
+          id="cost"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 500"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Selling Price (₹)
+        <input
+          id="selling"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 700"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      Profit margin is calculated against the selling price.
+      A negative profit means a loss.
+    </p>
+
+  </div>
+
+
+  <!-- About -->
+
+  <section class="content-section">
+
+    <h2>What Is Profit Margin?</h2>
+
+    <p>
+      Profit margin shows how much profit you earn from a sale compared with
+      the selling price. It is commonly used by shop owners, retailers,
+      wholesalers and small businesses to understand the profitability of
+      their products or services.
+    </p>
+
+    <p>
+      For example, if you buy a product for ₹500 and sell it for ₹700,
+      your profit is ₹200. The profit margin tells you what percentage of
+      the ₹700 selling price represents profit.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Profit Margin Formula</h2>
+
+    <p>The basic formulas are:</p>
+
+    <p>
+      <strong>Profit = Selling Price − Cost Price</strong>
+    </p>
+
+    <p>
+      <strong>Profit Margin = (Profit ÷ Selling Price) × 100</strong>
+    </p>
+
+    <p>
+      If the selling price is lower than the cost price, the result is a loss
+      and the profit margin will be negative.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Profit Margin Calculation Example</h2>
+
+    <p>Suppose you purchase a product for ₹500 and sell it for ₹700.</p>
+
+    <p>
+      <strong>Profit = ₹700 − ₹500 = ₹200</strong>
+    </p>
+
+    <p>
+      <strong>Profit Margin = (₹200 ÷ ₹700) × 100 = 28.57%</strong>
+    </p>
+
+    <p>
+      Therefore, your profit is ₹200 and your profit margin is approximately
+      <strong>28.57%</strong>.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Calculator</h2>
+
+    <ol>
+      <li>Enter the cost price of the product.</li>
+      <li>Enter the selling price.</li>
+      <li>Click the <strong>Calculate</strong> button.</li>
+      <li>View your profit or loss and profit margin.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Tips -->
+
+  <section class="content-section">
+
+    <h2>Profit Margin Tips for Small Businesses</h2>
+
+    <ul>
+      <li>Keep track of your actual purchase cost before setting a selling price.</li>
+      <li>Remember that expenses such as packaging, delivery and other business costs can reduce your actual net profit.</li>
+      <li>Compare margins across products to identify which products are more profitable.</li>
+      <li>Do not confuse profit margin with markup percentage.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is a good profit margin?</h3>
+
+    <p>
+      There is no single profit margin that is ideal for every business.
+      The appropriate margin depends on the industry, product, operating
+      expenses, competition and pricing strategy.
+    </p>
+
+
+    <h3>Is profit margin calculated on cost price or selling price?</h3>
+
+    <p>
+      Profit margin is generally calculated using the selling price as the
+      denominator. Markup, on the other hand, is calculated using the cost price.
+    </p>
+
+
+    <h3>What happens when the selling price is lower than the cost price?</h3>
+
+    <p>
+      You make a loss. The calculator will show a negative profit and a
+      negative profit margin.
+    </p>
+
+
+    <h3>Does profit margin include other business expenses?</h3>
+
+    <p>
+      This calculator calculates the difference between cost price and selling
+      price. Additional expenses such as rent, salaries, delivery charges,
+      packaging and taxes may need to be considered separately when calculating
+      overall business profitability.
+    </p>
+
+  </section>
+
+
+  <!-- Related calculators -->
+
+  <section class="content-section">
+
+    <h2>Related Calculators</h2>
+
+    <ul>
+      <li>
+        <a href="break-even.html">Break-Even Calculator</a>
+      </li>
+      <li>
+        <a href="gst.html">GST Calculator</a>
+      </li>
+    </ul>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+document.getElementById('calculate').onclick = () => {
+
+  const result = document.getElementById('result');
+
+  const c = +document.getElementById('cost').value;
+  const s = +document.getElementById('selling').value;
+
+  if (c <= 0 || s < 0) {
+    result.textContent = 'Enter valid prices.';
+    return;
+  }
+
+  const p = s - c;
+  const m = s ? (p / s) * 100 : 0;
+
+  result.innerHTML =
+    `<b>Profit/Loss:</b> ₹${p.toFixed(2)}<br>` +
+    `<b>Profit margin:</b> ${m.toFixed(2)}%`;
+
+};
+
+</script>
+
+</body>
+</html>
