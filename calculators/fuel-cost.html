@@ -1,1 +1,410 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Fuel Cost Calculator — free calculator from Chanvika Calculator."><title>Fuel Cost Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Fuel Cost Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Trip Distance (km)<input id="distance" type="number" inputmode="decimal" step="any" placeholder="e.g. 250" min="0"></label><label>Vehicle Mileage (km/l)<input id="mileage" type="number" inputmode="decimal" step="any" placeholder="e.g. 18" min="0"></label><label>Fuel Price (₹/litre)<input id="fuelprice" type="number" inputmode="decimal" step="any" placeholder="e.g. 100" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const d=+distance.value,m=+mileage.value,f=+fuelprice.value;if(d<0||m<=0||f<0){result.textContent='Enter valid trip details.';return}const litres=d/m,cost=litres*f;result.innerHTML=`<b>Fuel needed:</b> ${litres.toFixed(2)} litres<br><b>Fuel cost:</b> ₹${cost.toFixed(2)}<br><b>Cost/km:</b> ₹${(cost/d).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Fuel Cost Calculator to estimate fuel required, total fuel cost and cost per kilometre based on trip distance, vehicle mileage and fuel price.">
+
+  <title>Fuel Cost Calculator — Calculate Trip Fuel Cost | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Fuel Cost Calculator</h1>
+
+  <p>
+    Estimate how much fuel you need for a trip, the total fuel cost and the
+    approximate cost per kilometre using your vehicle's mileage and current
+    fuel price.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Trip Distance (km)
+        <input
+          id="distance"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 250"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Vehicle Mileage (km/l)
+        <input
+          id="mileage"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 18"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Fuel Price (₹/litre)
+        <input
+          id="fuelprice"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      Fuel prices and actual vehicle mileage can vary. This calculator provides
+      an estimate based on the values entered.
+    </p>
+
+  </div>
+
+
+  <!-- What is fuel cost -->
+
+  <section class="content-section">
+
+    <h2>What Is Fuel Cost?</h2>
+
+    <p>
+      Fuel cost is the amount spent on petrol, diesel or another vehicle fuel
+      during a journey. It depends mainly on the distance travelled, the
+      vehicle's fuel efficiency and the price of fuel.
+    </p>
+
+    <p>
+      This calculator estimates fuel consumption using the vehicle's stated
+      mileage in kilometres per litre.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Fuel Cost Formula</h2>
+
+    <p>
+      The estimated fuel required is calculated as:
+    </p>
+
+    <p>
+      <strong>
+        Fuel Required = Distance ÷ Mileage
+      </strong>
+    </p>
+
+    <p>
+      The estimated fuel cost is:
+    </p>
+
+    <p>
+      <strong>
+        Fuel Cost = Fuel Required × Fuel Price
+      </strong>
+    </p>
+
+    <p>
+      The approximate cost per kilometre is:
+    </p>
+
+    <p>
+      <strong>
+        Cost per km = Fuel Cost ÷ Distance
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Fuel Cost Calculation Example</h2>
+
+    <p>
+      Suppose your trip distance is 250 km, your vehicle gives a mileage of
+      18 km/litre and fuel costs ₹100 per litre.
+    </p>
+
+    <p>
+      Fuel Required = 250 ÷ 18 =
+      <strong>13.89 litres</strong>
+    </p>
+
+    <p>
+      Fuel Cost = 13.89 × ₹100 =
+      <strong>₹1,388.89</strong>
+    </p>
+
+    <p>
+      Approximate Cost per km =
+      <strong>₹5.56/km</strong>
+    </p>
+
+  </section>
+
+
+  <!-- Round trip -->
+
+  <section class="content-section">
+
+    <h2>How to Calculate Round-Trip Fuel Cost</h2>
+
+    <p>
+      If you are travelling to a destination and returning to your starting
+      point, enter the <strong>total round-trip distance</strong> in the
+      Trip Distance field.
+    </p>
+
+    <p>
+      For example, if the one-way distance is 125 km, the round-trip distance
+      is 250 km. Enter 250 km into the calculator.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Fuel Cost Calculator</h2>
+
+    <ol>
+      <li>Enter the total distance of your trip in kilometres.</li>
+      <li>Enter your vehicle's mileage in km/litre.</li>
+      <li>Enter the current fuel price per litre.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the estimated fuel required, fuel cost and cost per kilometre.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Mileage -->
+
+  <section class="content-section">
+
+    <h2>What Affects Vehicle Mileage?</h2>
+
+    <ul>
+      <li>Driving speed and acceleration</li>
+      <li>Traffic and road conditions</li>
+      <li>Vehicle load</li>
+      <li>Tyre pressure</li>
+      <li>Air-conditioning usage</li>
+      <li>Vehicle maintenance</li>
+      <li>Driving habits</li>
+    </ul>
+
+    <p>
+      The mileage shown by a manufacturer or vehicle dashboard may differ
+      from real-world mileage.
+    </p>
+
+  </section>
+
+
+  <!-- Saving fuel -->
+
+  <section class="content-section">
+
+    <h2>Ways to Reduce Fuel Costs</h2>
+
+    <ul>
+      <li>Maintain steady speeds where road conditions allow.</li>
+      <li>Avoid unnecessary acceleration and hard braking.</li>
+      <li>Keep tyres properly inflated.</li>
+      <li>Remove unnecessary weight from the vehicle.</li>
+      <li>Maintain the vehicle according to the manufacturer's recommendations.</li>
+      <li>Plan routes to reduce unnecessary distance and traffic delays.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important Information</h2>
+
+    <p>
+      This calculator provides an estimate based on the distance, mileage and
+      fuel price entered by the user.
+    </p>
+
+    <p>
+      Actual fuel consumption can differ because of traffic, driving style,
+      road conditions, weather, vehicle condition and other factors.
+    </p>
+
+    <p>
+      Fuel prices may also change by location and over time.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How is fuel cost calculated?</h3>
+
+    <p>
+      Fuel required is calculated by dividing the trip distance by vehicle
+      mileage. The fuel required is then multiplied by the fuel price per
+      litre.
+    </p>
+
+
+    <h3>What does km/litre mean?</h3>
+
+    <p>
+      Km/litre means the approximate number of kilometres a vehicle can
+      travel using one litre of fuel.
+    </p>
+
+
+    <h3>Can I calculate the cost of a round trip?</h3>
+
+    <p>
+      Yes. Enter the total distance for both the onward and return journeys.
+    </p>
+
+
+    <h3>Can I use this calculator for petrol and diesel vehicles?</h3>
+
+    <p>
+      Yes. Enter the appropriate fuel price and the vehicle's mileage.
+    </p>
+
+
+    <h3>Why is my actual fuel cost different?</h3>
+
+    <p>
+      Actual fuel consumption can differ from the mileage entered because of
+      traffic, driving conditions, vehicle load, speed and other factors.
+    </p>
+
+
+    <h3>Is this Fuel Cost Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const distance = document.getElementById('distance');
+const mileage = document.getElementById('mileage');
+const fuelprice = document.getElementById('fuelprice');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const d = Number(distance.value);
+  const m = Number(mileage.value);
+  const f = Number(fuelprice.value);
+
+  if (
+    distance.value === '' ||
+    mileage.value === '' ||
+    fuelprice.value === '' ||
+    d <= 0 ||
+    m <= 0 ||
+    f < 0
+  ) {
+    result.textContent = 'Enter valid trip details.';
+    return;
+  }
+
+  const litres = d / m;
+  const cost = litres * f;
+  const costPerKm = cost / d;
+
+  result.innerHTML =
+    `<b>Fuel needed:</b> ${litres.toFixed(2)} litres<br>` +
+    `<b>Fuel cost:</b> ₹${cost.toFixed(2)}<br>` +
+    `<b>Cost/km:</b> ₹${costPerKm.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
