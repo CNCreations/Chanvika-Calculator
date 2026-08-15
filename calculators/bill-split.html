@@ -1,1 +1,354 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Bill Split Calculator — free calculator from Chanvika Calculator."><title>Bill Split Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Bill Split Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Bill Amount (₹)<input id="bill" type="number" inputmode="decimal" step="any" placeholder="e.g. 2000" min="0"></label><label>Tax / Service Charge (%)<input id="tax" type="number" inputmode="decimal" step="any" placeholder="e.g. 5" min="0"></label><label>Tip (%)<input id="tip" type="number" inputmode="decimal" step="any" placeholder="e.g. 10" min="0"></label><label>Number of People<input id="people" type="number" inputmode="decimal" step="1" placeholder="e.g. 4" min="1"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const b=+bill.value,t=+tax.value,ti=+tip.value,p=+people.value;if(b<0||t<0||ti<0||p<=0){result.textContent='Enter valid values.';return}const ta=b*t/100,tipAmt=b*ti/100,total=b+ta+tipAmt;result.innerHTML=`<b>Tax/service:</b> ₹${ta.toFixed(2)}<br><b>Tip:</b> ₹${tipAmt.toFixed(2)}<br><b>Total:</b> ₹${total.toFixed(2)}<br><b>Per person:</b> ₹${(total/p).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Bill Split Calculator to divide a restaurant or meal bill between people after tax, service charges and tip.">
+
+  <title>Bill Split Calculator — Split a Bill Easily | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Bill Split Calculator</h1>
+
+  <p>
+    Split a restaurant, food or other shared bill between multiple people
+    after adding tax, service charges and tip.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Bill Amount (₹)
+        <input
+          id="bill"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 2000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Tax / Service Charge (%)
+        <input
+          id="tax"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 5"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Tip (%)
+        <input
+          id="tip"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Number of People
+        <input
+          id="people"
+          type="number"
+          inputmode="numeric"
+          step="1"
+          placeholder="e.g. 4"
+          min="1"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is it -->
+
+  <section class="content-section">
+
+    <h2>What Is a Bill Split Calculator?</h2>
+
+    <p>
+      A Bill Split Calculator helps you divide a shared bill between two or
+      more people. It can include additional tax or service charges and a
+      tip before calculating the final amount that each person needs to pay.
+    </p>
+
+    <p>
+      It is useful when friends, family members or colleagues share a
+      restaurant, food, travel or other group expense.
+    </p>
+
+  </section>
+
+
+  <!-- How it works -->
+
+  <section class="content-section">
+
+    <h2>How Does the Bill Split Calculator Work?</h2>
+
+    <p>
+      The calculator first calculates the tax or service charge and tip based
+      on the original bill amount. These amounts are added to the bill to
+      determine the total amount.
+    </p>
+
+    <p>
+      The final total is then divided equally by the number of people entered
+      in the calculator.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Bill Splitting Formula</h2>
+
+    <p>
+      <strong>Tax / Service Charge = Bill Amount × Tax Rate ÷ 100</strong>
+    </p>
+
+    <p>
+      <strong>Tip = Bill Amount × Tip Rate ÷ 100</strong>
+    </p>
+
+    <p>
+      <strong>Total Bill = Bill Amount + Tax / Service Charge + Tip</strong>
+    </p>
+
+    <p>
+      <strong>Amount Per Person = Total Bill ÷ Number of People</strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Bill Split Example</h2>
+
+    <p>
+      Suppose four people have a restaurant bill of ₹2,000. The tax or
+      service charge is 5% and the tip is 10%.
+    </p>
+
+    <p>
+      Tax / Service Charge = ₹2,000 × 5% = <strong>₹100</strong>
+    </p>
+
+    <p>
+      Tip = ₹2,000 × 10% = <strong>₹200</strong>
+    </p>
+
+    <p>
+      Total Bill = ₹2,000 + ₹100 + ₹200 = <strong>₹2,300</strong>
+    </p>
+
+    <p>
+      Amount Per Person = ₹2,300 ÷ 4 = <strong>₹575</strong>
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Calculator</h2>
+
+    <ol>
+      <li>Enter the total bill amount.</li>
+      <li>Enter the applicable tax or service charge percentage.</li>
+      <li>Enter the tip percentage, if applicable.</li>
+      <li>Enter the number of people sharing the bill.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Check the total bill and amount payable per person.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Tips -->
+
+  <section class="content-section">
+
+    <h2>Tips for Splitting a Shared Bill</h2>
+
+    <ul>
+      <li>Check whether taxes or service charges are already included in the bill.</li>
+      <li>Make sure the number of people is entered correctly.</li>
+      <li>If everyone ordered different items, an equal split may not be appropriate.</li>
+      <li>Round individual payments only after calculating the exact amount.</li>
+      <li>Always check the final restaurant or merchant bill before making payment.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Can I split a bill between two people?</h3>
+
+    <p>
+      Yes. Enter 2 as the number of people and the calculator will divide the
+      final bill equally between them.
+    </p>
+
+
+    <h3>Can I include a tip?</h3>
+
+    <p>
+      Yes. Enter the tip percentage and the calculator will add the calculated
+      tip to the original bill.
+    </p>
+
+
+    <h3>Does the calculator include tax or service charges?</h3>
+
+    <p>
+      Yes. You can enter a percentage for tax or service charges and the
+      calculator will add it to the bill before splitting the total.
+    </p>
+
+
+    <h3>Does everyone have to pay the same amount?</h3>
+
+    <p>
+      This calculator assumes an equal split. If people ordered different
+      items or have different expenses, the actual amounts may need to be
+      calculated separately.
+    </p>
+
+
+    <h3>Is this Bill Split Calculator free?</h3>
+
+    <p>
+      Yes. You can use this calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const bill = document.getElementById('bill');
+const tax = document.getElementById('tax');
+const tip = document.getElementById('tip');
+const people = document.getElementById('people');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const b = Number(bill.value);
+  const t = Number(tax.value || 0);
+  const ti = Number(tip.value || 0);
+  const p = Number(people.value);
+
+  if (
+    bill.value === '' ||
+    people.value === '' ||
+    b <= 0 ||
+    t < 0 ||
+    ti < 0 ||
+    p <= 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  const taxAmount = b * t / 100;
+  const tipAmount = b * ti / 100;
+  const total = b + taxAmount + tipAmount;
+  const perPerson = total / p;
+
+  result.innerHTML =
+    `<b>Tax/service:</b> ₹${taxAmount.toFixed(2)}<br>` +
+    `<b>Tip:</b> ₹${tipAmount.toFixed(2)}<br>` +
+    `<b>Total:</b> ₹${total.toFixed(2)}<br>` +
+    `<b>Per person:</b> ₹${perPerson.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
