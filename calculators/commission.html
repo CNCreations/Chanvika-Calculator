@@ -1,1 +1,320 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Commission Calculator — free calculator from Chanvika Calculator."><title>Commission Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Commission Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Sales / Transaction Value (₹)<input id="sales" type="number" inputmode="decimal" step="any" placeholder="e.g. 50000" min="0"></label><label>Commission Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 5" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const s=+sales.value,r=+rate.value;if(s<0||r<0){result.textContent='Enter valid values.';return}const c=s*r/100;result.innerHTML=`<b>Commission:</b> ₹${c.toFixed(2)}<br><b>After commission:</b> ₹${(s-c).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Use the free Commission Calculator to calculate commission amount and the amount remaining after commission from a sales value and commission rate.">
+
+  <title>Commission Calculator — Calculate Commission Online | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Commission Calculator</h1>
+
+  <p>
+    Calculate commission earned on a sales or transaction value and find
+    the amount remaining after commission.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Sales / Transaction Value (₹)
+        <input
+          id="sales"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 50000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Commission Rate (%)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 5"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- What is commission -->
+
+  <section class="content-section">
+
+    <h2>What Is a Commission?</h2>
+
+    <p>
+      A commission is an amount paid or earned based on the value of a sale,
+      transaction or service. It is commonly calculated as a percentage of
+      the transaction value.
+    </p>
+
+    <p>
+      Commission-based payments are often used in sales, real estate,
+      insurance, brokerage, affiliate sales and other businesses where
+      earnings depend on completed transactions.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Commission Formula</h2>
+
+    <p>
+      The basic commission formula is:
+    </p>
+
+    <p>
+      <strong>
+        Commission = Sales / Transaction Value × Commission Rate ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      The amount remaining after commission can be calculated as:
+    </p>
+
+    <p>
+      <strong>
+        Amount After Commission = Sales Value − Commission
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Commission Calculation Example</h2>
+
+    <p>
+      Suppose a salesperson completes a transaction worth ₹50,000 and the
+      agreed commission rate is 5%.
+    </p>
+
+    <p>
+      Commission = ₹50,000 × 5% =
+      <strong>₹2,500</strong>
+    </p>
+
+    <p>
+      Amount After Commission = ₹50,000 − ₹2,500 =
+      <strong>₹47,500</strong>
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Commission Calculator</h2>
+
+    <ol>
+      <li>Enter the sales or transaction value.</li>
+      <li>Enter the agreed commission percentage.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the commission amount and amount remaining after commission.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Uses -->
+
+  <section class="content-section">
+
+    <h2>Where Are Commission Calculations Used?</h2>
+
+    <ul>
+      <li>Sales commissions</li>
+      <li>Real estate transactions</li>
+      <li>Insurance sales</li>
+      <li>Brokerage transactions</li>
+      <li>Affiliate or referral arrangements</li>
+      <li>Agent and representative payments</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Important points -->
+
+  <section class="content-section">
+
+    <h2>Important Things to Check</h2>
+
+    <ul>
+      <li>Confirm whether the commission rate applies to the full transaction value.</li>
+      <li>Check whether taxes or other charges are included in the commission calculation.</li>
+      <li>Make sure you are using the agreed commission percentage.</li>
+      <li>Some commission arrangements may have minimums, maximums or different rates for different sales levels.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How is commission calculated?</h3>
+
+    <p>
+      Commission is commonly calculated by multiplying the sales or
+      transaction value by the commission rate and dividing by 100.
+    </p>
+
+
+    <h3>What is a 5% commission on ₹50,000?</h3>
+
+    <p>
+      A 5% commission on ₹50,000 is ₹2,500.
+    </p>
+
+
+    <h3>Can I use this calculator for sales commissions?</h3>
+
+    <p>
+      Yes. You can use it to calculate a percentage-based commission on a
+      sales or transaction value.
+    </p>
+
+
+    <h3>Does the calculator include taxes?</h3>
+
+    <p>
+      No. This calculator only calculates the commission based on the
+      transaction value and commission rate. Any applicable taxes or other
+      charges should be considered separately.
+    </p>
+
+
+    <h3>Can the commission rate be a decimal?</h3>
+
+    <p>
+      Yes. You can enter decimal commission rates such as 2.5% if applicable.
+    </p>
+
+
+    <h3>Is this Commission Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const sales = document.getElementById('sales');
+const rate = document.getElementById('rate');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const s = Number(sales.value);
+  const r = Number(rate.value);
+
+  if (
+    sales.value === '' ||
+    rate.value === '' ||
+    s <= 0 ||
+    r < 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  const commission = s * r / 100;
+  const afterCommission = s - commission;
+
+  result.innerHTML =
+    `<b>Commission:</b> ₹${commission.toFixed(2)}<br>` +
+    `<b>After commission:</b> ₹${afterCommission.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
