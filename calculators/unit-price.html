@@ -1,1 +1,394 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Unit Price Calculator — free calculator from Chanvika Calculator."><title>Unit Price Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Unit Price Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Total Price (₹)<input id="price" type="number" inputmode="decimal" step="any" placeholder="e.g. 250" min="0"></label><label>Quantity / Weight / Volume<input id="qty" type="number" inputmode="decimal" step="any" placeholder="e.g. 2" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">Use the same unit when comparing products, e.g. grams with grams or litres with litres.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const p=+price.value,q=+qty.value;if(p<0||q<=0){result.textContent='Enter a valid price and quantity.';return}result.innerHTML=`<b>Price per unit:</b> ₹${(p/q).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Free Unit Price Calculator to compare the cost of products by quantity, weight or volume.">
+
+<title>Unit Price Calculator — Chanvika Calculator</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container nav">
+
+<a class="brand" href="../index.html">
+Chanvika Calculator
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">Calculators</a>
+<a href="../faq.html">FAQs</a>
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+<a class="back" href="../index.html">← All calculators</a>
+
+<h1>Unit Price Calculator</h1>
+
+<p>
+Calculate the price per unit of a product and compare different package
+sizes easily.
+</p>
+
+
+<div class="calculator-box">
+
+<div class="fields">
+
+<label>
+Total Price (₹)
+<input
+id="price"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 250"
+min="0">
+</label>
+
+
+<label>
+Quantity / Weight / Volume
+<input
+id="qty"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 2"
+min="0">
+</label>
+
+
+<label>
+Unit
+<select id="unit">
+<option value="unit">Unit</option>
+<option value="g">Gram (g)</option>
+<option value="kg">Kilogram (kg)</option>
+<option value="ml">Millilitre (ml)</option>
+<option value="l">Litre (L)</option>
+</select>
+</label>
+
+</div>
+
+
+<button id="calculate">Calculate</button>
+
+
+<div id="result" class="result" aria-live="polite"></div>
+
+
+<p class="note">
+Use the same unit when comparing products. For example, compare grams
+with grams or litres with litres.
+</p>
+
+</div>
+
+
+<section class="content-section">
+
+<h2>What Is Unit Price?</h2>
+
+<p>
+Unit price tells you how much a product costs for one unit of quantity,
+weight or volume.
+</p>
+
+<p>
+It is especially useful when comparing different package sizes in shops
+and supermarkets.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Unit Price Formula</h2>
+
+<p>
+The basic formula is:
+</p>
+
+<p>
+<strong>
+Unit Price = Total Price ÷ Quantity
+</strong>
+</p>
+
+<p>
+For example, if a 2 kg product costs ₹250:
+</p>
+
+<p>
+<strong>
+₹250 ÷ 2 = ₹125 per kg
+</strong>
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Unit Price Example</h2>
+
+<p>
+Suppose Product A costs <strong>₹200</strong> for <strong>2 kg</strong>.
+</p>
+
+<p>
+Its price is:
+<strong>₹100 per kg</strong>.
+</p>
+
+<p>
+If another product costs ₹130 per kg, Product A is cheaper based on unit
+price.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Why Compare Unit Prices?</h2>
+
+<p>
+A larger package is not always cheaper. Comparing the unit price lets you
+see the actual cost of the product regardless of package size.
+</p>
+
+<p>
+For example, a 500 g packet may appear cheaper than a 1 kg packet, but
+the 1 kg packet may provide better value when its price per kilogram is
+lower.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use This Calculator</h2>
+
+<ol>
+<li>Enter the total product price.</li>
+<li>Enter the quantity, weight or volume.</li>
+<li>Select the appropriate unit.</li>
+<li>Click <strong>Calculate</strong>.</li>
+<li>Compare the resulting unit price with other products.</li>
+</ol>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Common Unit Price Comparisons</h2>
+
+<ul>
+<li>₹ per gram</li>
+<li>₹ per kilogram</li>
+<li>₹ per millilitre</li>
+<li>₹ per litre</li>
+<li>₹ per item or piece</li>
+</ul>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<h3>What is the cheapest way to compare products?</h3>
+
+<p>
+Compare the unit price rather than only the package price. The product
+with the lower comparable unit price generally costs less for the same
+quantity.
+</p>
+
+
+<h3>Can I compare different package sizes?</h3>
+
+<p>
+Yes. Unit pricing is specifically useful for comparing different package
+sizes.
+</p>
+
+
+<h3>Can I compare grams and kilograms directly?</h3>
+
+<p>
+Convert them to the same unit first. For example, compare ₹ per kilogram
+with ₹ per kilogram.
+</p>
+
+
+<h3>Can I use this calculator for liquids?</h3>
+
+<p>
+Yes. You can use it for millilitres or litres. Make sure the same unit is
+used when comparing products.
+</p>
+
+
+<h3>Is this Unit Price Calculator free?</h3>
+
+<p>
+Yes. This calculator is free to use.
+</p>
+
+</section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Chanvika Calculator
+
+<div class="footer-links">
+
+<a href="../about.html">About Us</a>
+<a href="../faq.html">FAQs</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms-of-use.html">Terms of Use</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const price = document.getElementById('price');
+const qty = document.getElementById('qty');
+const unit = document.getElementById('unit');
+const result = document.getElementById('result');
+
+
+document.getElementById('calculate').onclick = () => {
+
+const p = Number(price.value);
+const q = Number(qty.value);
+const selectedUnit = unit.value;
+
+
+if (
+price.value === '' ||
+qty.value === '' ||
+p < 0 ||
+q <= 0
+) {
+
+result.textContent = 'Enter a valid price and quantity.';
+return;
+
+}
+
+
+const unitPrice = p / q;
+
+let standardPrice = unitPrice;
+let standardLabel = selectedUnit;
+
+
+if (selectedUnit === 'g') {
+
+standardPrice = unitPrice * 1000;
+standardLabel = 'kg';
+
+}
+
+
+if (selectedUnit === 'kg') {
+
+standardPrice = unitPrice;
+standardLabel = 'kg';
+
+}
+
+
+if (selectedUnit === 'ml') {
+
+standardPrice = unitPrice * 1000;
+standardLabel = 'litre';
+
+}
+
+
+if (selectedUnit === 'l') {
+
+standardPrice = unitPrice;
+standardLabel = 'litre';
+
+}
+
+
+let html =
+`<b>Price per ${selectedUnit}:</b> ₹${unitPrice.toFixed(2)}`;
+
+
+if (
+selectedUnit === 'g' ||
+selectedUnit === 'kg'
+) {
+
+html +=
+`<br><b>Price per kg:</b> ₹${standardPrice.toFixed(2)}`;
+
+}
+
+
+if (
+selectedUnit === 'ml' ||
+selectedUnit === 'l'
+) {
+
+html +=
+`<br><b>Price per litre:</b> ₹${standardPrice.toFixed(2)}`;
+
+}
+
+
+if (selectedUnit === 'unit') {
+
+html +=
+`<br><b>Price per item:</b> ₹${unitPrice.toFixed(2)}`;
+
+}
+
+
+result.innerHTML = html;
+
+};
+
+</script>
+
+</body>
+</html>
