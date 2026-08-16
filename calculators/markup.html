@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <meta name="description" content="Free Jewellery Price Calculator to estimate jewellery cost using metal weight, metal rate, wastage, making charges and GST.">
+  <meta name="description" content="Free Markup Calculator to calculate markup amount and selling price from cost price and markup percentage.">
 
-  <title>Jewellery Price Calculator — Estimate Jewellery Cost | Chanvika Calculator</title>
+  <title>Markup Calculator — Calculate Selling Price | Chanvika Calculator</title>
 
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -36,11 +36,11 @@
 
   <a class="back" href="../index.html">← All calculators</a>
 
-  <h1>Jewellery Price Calculator</h1>
+  <h1>Markup Calculator</h1>
 
   <p>
-    Estimate the price of jewellery using metal weight, metal rate, wastage,
-    making charges and GST.
+    Calculate the markup amount and estimated selling price using your cost
+    price and desired markup percentage.
   </p>
 
 
@@ -51,61 +51,25 @@
     <div class="fields">
 
       <label>
-        Metal Weight (grams)
+        Cost Price (₹)
         <input
-          id="weight"
+          id="cost"
           type="number"
           inputmode="decimal"
           step="any"
-          placeholder="e.g. 10"
+          placeholder="e.g. 500"
           min="0"
         >
       </label>
 
       <label>
-        Metal Rate (₹/gram)
+        Markup (%)
         <input
-          id="rate"
+          id="markup"
           type="number"
           inputmode="decimal"
           step="any"
-          placeholder="e.g. 6500"
-          min="0"
-        >
-      </label>
-
-      <label>
-        Making Charge (%)
-        <input
-          id="making"
-          type="number"
-          inputmode="decimal"
-          step="any"
-          placeholder="e.g. 10"
-          min="0"
-        >
-      </label>
-
-      <label>
-        Wastage (%)
-        <input
-          id="wastage"
-          type="number"
-          inputmode="decimal"
-          step="any"
-          placeholder="e.g. 3"
-          min="0"
-        >
-      </label>
-
-      <label>
-        GST (%)
-        <input
-          id="gst"
-          type="number"
-          inputmode="decimal"
-          step="any"
-          placeholder="e.g. 3"
+          placeholder="e.g. 30"
           min="0"
         >
       </label>
@@ -117,30 +81,27 @@
     <div id="result" class="result" aria-live="polite"></div>
 
     <p class="note">
-      Jewellery pricing varies by purity, metal rate, wastage, making charges,
-      taxes and jeweller. This calculator provides an estimate only. Verify
-      the final invoice before making a purchase.
+      Markup is calculated as a percentage of cost price. Taxes, discounts,
+      shipping and other business expenses are not included.
     </p>
 
   </div>
 
 
-  <!-- What is jewellery pricing -->
+  <!-- What is markup -->
 
   <section class="content-section">
 
-    <h2>How Is Jewellery Price Calculated?</h2>
+    <h2>What Is Markup?</h2>
 
     <p>
-      Jewellery pricing can include several components. These may include
-      the value of the precious metal, wastage charges, making charges and
-      applicable taxes.
+      Markup is the amount added to the cost of a product or service to
+      determine its selling price.
     </p>
 
     <p>
-      The exact pricing method can differ between jewellers and jewellery
-      products, so the calculator should be treated as an estimate rather
-      than an official quotation.
+      For example, if a product costs ₹500 and you apply a 30% markup, the
+      markup amount is ₹150 and the estimated selling price is ₹650.
     </p>
 
   </section>
@@ -150,62 +111,25 @@
 
   <section class="content-section">
 
-    <h2>Jewellery Price Calculation Formula</h2>
+    <h2>Markup Formula</h2>
 
     <p>
-      The basic metal value is calculated as:
+      The markup amount is calculated as:
     </p>
 
     <p>
       <strong>
-        Metal Value = Weight × Metal Rate
+        Markup = Cost Price × Markup % ÷ 100
       </strong>
     </p>
 
     <p>
-      Estimated wastage value is calculated as:
+      The selling price is:
     </p>
 
     <p>
       <strong>
-        Wastage Value = Metal Value × Wastage % ÷ 100
-      </strong>
-    </p>
-
-    <p>
-      In this calculator, making charges are calculated on the metal value
-      plus the estimated wastage value:
-    </p>
-
-    <p>
-      <strong>
-        Making Charge = (Metal Value + Wastage Value) × Making % ÷ 100
-      </strong>
-    </p>
-
-    <p>
-      The taxable subtotal is:
-    </p>
-
-    <p>
-      <strong>
-        Subtotal = Metal Value + Wastage Value + Making Charge
-      </strong>
-    </p>
-
-    <p>
-      Finally:
-    </p>
-
-    <p>
-      <strong>
-        GST = Subtotal × GST % ÷ 100
-      </strong>
-    </p>
-
-    <p>
-      <strong>
-        Estimated Total = Subtotal + GST
+        Selling Price = Cost Price + Markup
       </strong>
     </p>
 
@@ -216,108 +140,108 @@
 
   <section class="content-section">
 
-    <h2>Jewellery Price Calculation Example</h2>
+    <h2>Markup Calculation Example</h2>
 
     <p>
-      Suppose you are purchasing jewellery with the following values:
+      Suppose a shop purchases a product for <strong>₹500</strong> and wants
+      to apply a <strong>30% markup</strong>.
+    </p>
+
+    <p>
+      Markup = ₹500 × 30% =
+      <strong>₹150</strong>
+    </p>
+
+    <p>
+      Selling Price = ₹500 + ₹150 =
+      <strong>₹650</strong>
+    </p>
+
+    <p>
+      Therefore, the estimated selling price before taxes, discounts and
+      other charges would be ₹650.
+    </p>
+
+  </section>
+
+
+  <!-- Markup vs margin -->
+
+  <section class="content-section">
+
+    <h2>Markup vs Profit Margin</h2>
+
+    <p>
+      Markup and profit margin are related but they are not the same thing.
+    </p>
+
+    <p>
+      <strong>Markup</strong> is calculated based on the cost price, while
+      <strong>profit margin</strong> is calculated based on the selling price.
+    </p>
+
+    <p>
+      For example, if the cost is ₹500 and the selling price is ₹650:
     </p>
 
     <ul>
-      <li>Weight: <strong>10 grams</strong></li>
-      <li>Metal rate: <strong>₹6,500/gram</strong></li>
-      <li>Wastage: <strong>3%</strong></li>
-      <li>Making charge: <strong>10%</strong></li>
-      <li>GST: <strong>3%</strong></li>
+      <li>Markup = ₹150 ÷ ₹500 × 100 = <strong>30%</strong></li>
+      <li>Profit Margin = ₹150 ÷ ₹650 × 100 ≈ <strong>23.08%</strong></li>
     </ul>
 
     <p>
-      Metal Value = 10 × ₹6,500 =
-      <strong>₹65,000</strong>
-    </p>
-
-    <p>
-      Wastage Value = 3% of ₹65,000 =
-      <strong>₹1,950</strong>
-    </p>
-
-    <p>
-      Making Charge = 10% of ₹66,950 =
-      <strong>₹6,695</strong>
-    </p>
-
-    <p>
-      Subtotal =
-      <strong>₹73,645</strong>
-    </p>
-
-    <p>
-      GST at 3% =
-      <strong>₹2,209.35</strong>
-    </p>
-
-    <p>
-      Estimated Total =
-      <strong>₹75,854.35</strong>
+      So a 30% markup does not mean a 30% profit margin.
     </p>
 
   </section>
 
 
-  <!-- Purity -->
+  <!-- Business use -->
 
   <section class="content-section">
 
-    <h2>Jewellery Purity and Metal Rate</h2>
+    <h2>Why Is Markup Important for a Business?</h2>
 
     <p>
-      Precious-metal jewellery may be sold in different purities. The
-      applicable metal rate can therefore depend on the purity and the
-      market rate used by the jeweller.
+      Businesses often use markup to help set selling prices for products
+      and services.
     </p>
 
     <p>
-      Always confirm whether the quoted rate is for the actual purity of
-      the jewellery you are purchasing.
+      A suitable markup can help cover operating expenses and contribute
+      towards profit. However, the correct markup depends on the business,
+      product category, competition and other costs.
     </p>
 
   </section>
 
 
-  <!-- Wastage -->
+  <!-- Costs -->
 
   <section class="content-section">
 
-    <h2>What Is Wastage Charge?</h2>
+    <h2>Costs to Consider Before Setting a Markup</h2>
 
     <p>
-      Wastage is commonly used to represent an additional amount associated
-      with the manufacturing process. The way it is calculated can vary
-      between jewellers and products.
+      A simple markup calculation only considers the cost price. A business
+      may also have other expenses, such as:
     </p>
 
-    <p>
-      Therefore, the wastage calculation in this tool is a simplified
-      estimation method.
-    </p>
-
-  </section>
-
-
-  <!-- Making charges -->
-
-  <section class="content-section">
-
-    <h2>What Are Making Charges?</h2>
+    <ul>
+      <li>Rent</li>
+      <li>Employee wages</li>
+      <li>Electricity</li>
+      <li>Packaging</li>
+      <li>Transportation</li>
+      <li>Payment processing fees</li>
+      <li>Marketing expenses</li>
+      <li>Taxes</li>
+      <li>Returns and damaged inventory</li>
+    </ul>
 
     <p>
-      Making charges represent the cost associated with designing,
-      manufacturing and finishing jewellery.
-    </p>
-
-    <p>
-      Jewellers may calculate making charges as a percentage, a per-gram
-      amount or using another pricing method. This calculator uses a
-      percentage-based method.
+      These expenses should be considered when deciding the final selling
+      price.
     </p>
 
   </section>
@@ -327,35 +251,31 @@
 
   <section class="content-section">
 
-    <h2>How to Use This Jewellery Price Calculator</h2>
+    <h2>How to Use This Markup Calculator</h2>
 
     <ol>
-      <li>Enter the jewellery weight in grams.</li>
-      <li>Enter the applicable metal rate per gram.</li>
-      <li>Enter the estimated wastage percentage.</li>
-      <li>Enter the making charge percentage.</li>
-      <li>Enter the applicable GST percentage.</li>
+      <li>Enter the cost price of the product.</li>
+      <li>Enter your desired markup percentage.</li>
       <li>Click <strong>Calculate</strong>.</li>
-      <li>Review the estimated total price.</li>
+      <li>View the markup amount.</li>
+      <li>View the estimated selling price.</li>
     </ol>
 
   </section>
 
 
-  <!-- Buying tips -->
+  <!-- Pricing example table -->
 
   <section class="content-section">
 
-    <h2>Things to Check Before Buying Jewellery</h2>
+    <h2>Markup Examples</h2>
 
     <ul>
-      <li>Confirm the metal purity.</li>
-      <li>Check the weight mentioned on the invoice.</li>
-      <li>Check the metal rate being used.</li>
-      <li>Ask how wastage has been calculated.</li>
-      <li>Check the making charge.</li>
-      <li>Verify applicable taxes.</li>
-      <li>Review the complete invoice before payment.</li>
+      <li>₹500 cost + 10% markup = <strong>₹550</strong></li>
+      <li>₹500 cost + 20% markup = <strong>₹600</strong></li>
+      <li>₹500 cost + 30% markup = <strong>₹650</strong></li>
+      <li>₹500 cost + 50% markup = <strong>₹750</strong></li>
+      <li>₹500 cost + 100% markup = <strong>₹1,000</strong></li>
     </ul>
 
   </section>
@@ -368,18 +288,18 @@
     <h2>Important Information</h2>
 
     <p>
-      This calculator does not determine the official market price of gold,
-      silver, platinum or any other metal.
+      This calculator only calculates markup based on the cost price and
+      markup percentage entered.
     </p>
 
     <p>
-      It also does not determine the legally applicable tax rate, purity,
-      hallmarking requirements or a jeweller's pricing policy.
+      It does not determine the ideal selling price for a particular business
+      or market.
     </p>
 
     <p>
-      The actual invoice may differ from this estimate. Always verify the
-      final price and applicable charges with the jeweller.
+      Actual pricing decisions should also consider demand, competition,
+      operating expenses, taxes, discounts and other applicable costs.
     </p>
 
   </section>
@@ -391,56 +311,47 @@
 
     <h2>Frequently Asked Questions</h2>
 
-    <h3>How is jewellery price calculated?</h3>
+    <h3>How is markup calculated?</h3>
 
     <p>
-      Jewellery price can include metal value, wastage, making charges and
-      applicable taxes. The exact calculation can vary by jeweller.
+      Markup is calculated by multiplying the cost price by the markup
+      percentage and dividing by 100.
     </p>
 
 
-    <h3>What is the metal value?</h3>
+    <h3>What is the difference between markup and margin?</h3>
 
     <p>
-      Metal value is the jewellery weight multiplied by the applicable
-      metal rate per gram.
+      Markup is calculated as a percentage of cost price, while profit margin
+      is calculated as a percentage of selling price.
     </p>
 
 
-    <h3>What is wastage?</h3>
+    <h3>What is a 30% markup on ₹500?</h3>
 
     <p>
-      Wastage is an additional amount associated with jewellery manufacturing.
-      Its calculation can vary between jewellers.
+      A 30% markup on ₹500 is ₹150, resulting in an estimated selling price
+      of ₹650.
     </p>
 
 
-    <h3>What are making charges?</h3>
+    <h3>Does markup include GST?</h3>
 
     <p>
-      Making charges are charges associated with designing, manufacturing
-      and finishing the jewellery.
+      No. This calculator calculates markup and selling price before GST or
+      other taxes unless those costs are already included in your cost price.
     </p>
 
 
-    <h3>Can making charges be calculated differently?</h3>
+    <h3>Can I use this for retail products?</h3>
 
     <p>
-      Yes. Some jewellers may use a percentage, per-gram charge or another
-      pricing method. This calculator uses a percentage-based method.
+      Yes. It can be used for a quick markup-based pricing estimate for
+      retail products and other goods or services.
     </p>
 
 
-    <h3>Is this Jewellery Price Calculator accurate?</h3>
-
-    <p>
-      It provides a mathematical estimate based on the values entered.
-      The final jewellery price can differ depending on purity, jeweller,
-      market rate, charges and applicable taxes.
-    </p>
-
-
-    <h3>Is this Jewellery Price Calculator free?</h3>
+    <h3>Is this Markup Calculator free?</h3>
 
     <p>
       Yes. You can use the calculator for free.
@@ -474,61 +385,32 @@
 
 <script>
 
-const weight = document.getElementById('weight');
-const rate = document.getElementById('rate');
-const making = document.getElementById('making');
-const wastage = document.getElementById('wastage');
-const gst = document.getElementById('gst');
+const cost = document.getElementById('cost');
+const markup = document.getElementById('markup');
 const result = document.getElementById('result');
 
 document.getElementById('calculate').onclick = () => {
 
-  const w = Number(weight.value);
-  const r = Number(rate.value);
-  const m = Number(making.value);
-  const wa = Number(wastage.value);
-  const g = Number(gst.value);
+  const c = Number(cost.value);
+  const m = Number(markup.value);
 
   if (
-    weight.value === '' ||
-    rate.value === '' ||
-    making.value === '' ||
-    wastage.value === '' ||
-    gst.value === '' ||
-    w <= 0 ||
-    r < 0 ||
-    m < 0 ||
-    wa < 0 ||
-    g < 0
+    cost.value === '' ||
+    markup.value === '' ||
+    c <= 0 ||
+    m < 0
   ) {
-    result.textContent = 'Enter valid jewellery details.';
+    result.textContent = 'Enter valid cost price and markup.';
     return;
   }
 
-  const metalValue = w * r;
-
-  const wastageValue =
-    metalValue * wa / 100;
-
-  const makingCharge =
-    (metalValue + wastageValue) * m / 100;
-
-  const subtotal =
-    metalValue + wastageValue + makingCharge;
-
-  const gstAmount =
-    subtotal * g / 100;
-
-  const total =
-    subtotal + gstAmount;
+  const markupAmount = c * m / 100;
+  const sellingPrice = c + markupAmount;
 
   result.innerHTML =
-    `<b>Metal value:</b> ₹${metalValue.toFixed(2)}<br>` +
-    `<b>Wastage:</b> ₹${wastageValue.toFixed(2)}<br>` +
-    `<b>Making charge:</b> ₹${makingCharge.toFixed(2)}<br>` +
-    `<b>Subtotal:</b> ₹${subtotal.toFixed(2)}<br>` +
-    `<b>GST:</b> ₹${gstAmount.toFixed(2)}<br>` +
-    `<b>Estimated total:</b> ₹${total.toFixed(2)}`;
+    `<b>Cost price:</b> ₹${c.toFixed(2)}<br>` +
+    `<b>Markup:</b> ₹${markupAmount.toFixed(2)}<br>` +
+    `<b>Selling price:</b> ₹${sellingPrice.toFixed(2)}`;
 
 };
 
