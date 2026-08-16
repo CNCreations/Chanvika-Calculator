@@ -1,1 +1,492 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Percentage Calculator — free calculator from Chanvika Calculator."><title>Percentage Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Percentage Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Number<input id="a" type="number" inputmode="decimal" step="any" placeholder="e.g. 25"></label><label>Base / Total<input id="b" type="number" inputmode="decimal" step="any" placeholder="e.g. 200"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const x=+a.value,y=+b.value;if(y===0){result.textContent='Base cannot be zero.';return}result.innerHTML=`<b>Percentage:</b> ${(x/y*100).toFixed(2)}%<br><b>Difference:</b> ${Math.abs(x-y).toFixed(2)}<br><b>Change from base:</b> ${((x-y)/y*100).toFixed(2)}%`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Free Percentage Calculator to calculate percentages, percentage increase, decrease and percentage of a number.">
+
+  <title>Percentage Calculator — Calculate Percentage | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Percentage Calculator</h1>
+
+  <p>
+    Calculate percentages, find a percentage of a number, and calculate
+    percentage increase or decrease.
+  </p>
+
+
+  <!-- Calculation 1 -->
+
+  <div class="calculator-box">
+
+    <h2>1. What Percentage Is One Number of Another?</h2>
+
+    <p>
+      Find out what percentage one number represents of another number.
+    </p>
+
+    <div class="fields">
+
+      <label>
+        Number
+        <input
+          id="a"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 25"
+        >
+      </label>
+
+      <label>
+        Base / Total
+        <input
+          id="b"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 200"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate1">Calculate</button>
+
+    <div id="result1" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- Calculation 2 -->
+
+  <div class="calculator-box">
+
+    <h2>2. Calculate a Percentage of a Number</h2>
+
+    <p>
+      Find the value of a specific percentage of a number.
+    </p>
+
+    <div class="fields">
+
+      <label>
+        Percentage (%)
+        <input
+          id="percent"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 20"
+        >
+      </label>
+
+      <label>
+        Number
+        <input
+          id="number"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 500"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate2">Calculate</button>
+
+    <div id="result2" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- Calculation 3 -->
+
+  <div class="calculator-box">
+
+    <h2>3. Percentage Increase or Decrease</h2>
+
+    <p>
+      Calculate the percentage change between an original value and a new
+      value.
+    </p>
+
+    <div class="fields">
+
+      <label>
+        Original Value
+        <input
+          id="original"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 500"
+        >
+      </label>
+
+      <label>
+        New Value
+        <input
+          id="newvalue"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 650"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate3">Calculate</button>
+
+    <div id="result3" class="result" aria-live="polite"></div>
+
+  </div>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Percentage Formulas</h2>
+
+    <p>
+      To find what percentage one number is of another:
+    </p>
+
+    <p>
+      <strong>
+        Percentage = (Number ÷ Base) × 100
+      </strong>
+    </p>
+
+    <p>
+      To calculate a percentage of a number:
+    </p>
+
+    <p>
+      <strong>
+        Percentage Value = Number × Percentage ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      To calculate percentage increase or decrease:
+    </p>
+
+    <p>
+      <strong>
+        Percentage Change =
+        (New Value − Original Value) ÷ Original Value × 100
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Examples -->
+
+  <section class="content-section">
+
+    <h2>Percentage Calculation Examples</h2>
+
+    <h3>Example 1: What is 25 out of 200?</h3>
+
+    <p>
+      (25 ÷ 200) × 100 =
+      <strong>12.50%</strong>
+    </p>
+
+
+    <h3>Example 2: What is 20% of ₹500?</h3>
+
+    <p>
+      ₹500 × 20 ÷ 100 =
+      <strong>₹100</strong>
+    </p>
+
+
+    <h3>Example 3: Price increased from ₹500 to ₹650</h3>
+
+    <p>
+      ((₹650 − ₹500) ÷ ₹500) × 100 =
+      <strong>30% increase</strong>
+    </p>
+
+  </section>
+
+
+  <!-- Business use -->
+
+  <section class="content-section">
+
+    <h2>Where Can Percentage Calculations Be Used?</h2>
+
+    <p>
+      Percentage calculations are useful in everyday life and business.
+      Common examples include:
+    </p>
+
+    <ul>
+      <li>Discount calculations</li>
+      <li>GST calculations</li>
+      <li>Profit and loss</li>
+      <li>Profit margins</li>
+      <li>Markup calculations</li>
+      <li>Salary increases</li>
+      <li>Price increases</li>
+      <li>Exam scores</li>
+      <li>Business growth</li>
+      <li>Budget calculations</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Markup vs percentage -->
+
+  <section class="content-section">
+
+    <h2>Percentage vs Percentage Change</h2>
+
+    <p>
+      A percentage and a percentage change are not always the same thing.
+      Percentage usually compares one value with a base, while percentage
+      change compares a new value with an original value.
+    </p>
+
+    <p>
+      For example, an increase from ₹500 to ₹650 represents a
+      <strong>30% increase</strong> because the ₹150 increase is measured
+      against the original ₹500.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Percentage Calculator</h2>
+
+    <ol>
+      <li>Choose the calculation you need.</li>
+      <li>Enter the required numbers.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Review the result shown below the calculator.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is 10% of 1,000?</h3>
+
+    <p>
+      10% of 1,000 is <strong>100</strong>.
+    </p>
+
+
+    <h3>How do I calculate percentage?</h3>
+
+    <p>
+      Divide the number by the base or total and multiply the result by 100.
+    </p>
+
+
+    <h3>How do I calculate percentage increase?</h3>
+
+    <p>
+      Subtract the original value from the new value, divide the difference
+      by the original value and multiply by 100.
+    </p>
+
+
+    <h3>How do I calculate percentage decrease?</h3>
+
+    <p>
+      Use the same percentage-change formula. If the new value is lower than
+      the original value, the result will be negative, indicating a decrease.
+    </p>
+
+
+    <h3>Is this Percentage Calculator free?</h3>
+
+    <p>
+      Yes. You can use this calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* Calculation 1 */
+
+const a = document.getElementById('a');
+const b = document.getElementById('b');
+const result1 = document.getElementById('result1');
+
+document.getElementById('calculate1').onclick = () => {
+
+  const x = Number(a.value);
+  const y = Number(b.value);
+
+  if (
+    a.value === '' ||
+    b.value === '' ||
+    y === 0
+  ) {
+    result1.textContent = 'Enter valid numbers. Base cannot be zero.';
+    return;
+  }
+
+  const percentage = (x / y) * 100;
+  const difference = Math.abs(x - y);
+
+  result1.innerHTML =
+    `<b>Percentage:</b> ${percentage.toFixed(2)}%<br>` +
+    `<b>Difference:</b> ${difference.toFixed(2)}`;
+
+};
+
+
+/* Calculation 2 */
+
+const percent = document.getElementById('percent');
+const number = document.getElementById('number');
+const result2 = document.getElementById('result2');
+
+document.getElementById('calculate2').onclick = () => {
+
+  const p = Number(percent.value);
+  const n = Number(number.value);
+
+  if (
+    percent.value === '' ||
+    number.value === ''
+  ) {
+    result2.textContent = 'Enter valid numbers.';
+    return;
+  }
+
+  const value = (p * n) / 100;
+
+  result2.innerHTML =
+    `<b>${p}% of ${n}:</b> ${value.toFixed(2)}`;
+
+};
+
+
+/* Calculation 3 */
+
+const original = document.getElementById('original');
+const newvalue = document.getElementById('newvalue');
+const result3 = document.getElementById('result3');
+
+document.getElementById('calculate3').onclick = () => {
+
+  const oldValue = Number(original.value);
+  const newValue = Number(newvalue.value);
+
+  if (
+    original.value === '' ||
+    newvalue.value === '' ||
+    oldValue === 0
+  ) {
+    result3.textContent =
+      'Enter valid values. Original value cannot be zero.';
+    return;
+  }
+
+  const change =
+    ((newValue - oldValue) / oldValue) * 100;
+
+  const difference =
+    newValue - oldValue;
+
+  if (change > 0) {
+
+    result3.innerHTML =
+      `<b>Change:</b> +${difference.toFixed(2)}<br>` +
+      `<b>Percentage increase:</b> ${change.toFixed(2)}%`;
+
+  } else if (change < 0) {
+
+    result3.innerHTML =
+      `<b>Change:</b> ${difference.toFixed(2)}<br>` +
+      `<b>Percentage decrease:</b> ${Math.abs(change).toFixed(2)}%`;
+
+  } else {
+
+    result3.innerHTML =
+      `<b>Change:</b> 0.00<br>` +
+      `<b>Percentage change:</b> 0.00%`;
+
+  }
+
+};
+
+</script>
+
+</body>
+</html>
