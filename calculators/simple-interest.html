@@ -1,1 +1,318 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Simple Interest Calculator — free calculator from Chanvika Calculator."><title>Simple Interest Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Simple Interest Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Principal (₹)<input id="principal" type="number" inputmode="decimal" step="any" placeholder="e.g. 10000" min="0"></label><label>Annual Interest Rate (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 8" min="0"></label><label>Time (years)<input id="years" type="number" inputmode="decimal" step="any" placeholder="e.g. 2" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const p=+principal.value,r=+rate.value,t=+years.value;if(p<0||r<0||t<0){result.textContent='Enter valid values.';return}const i=p*r*t/100;result.innerHTML=`<b>Interest:</b> ₹${i.toFixed(2)}<br><b>Total:</b> ₹${(p+i).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Free Simple Interest Calculator to calculate interest and total amount based on principal, interest rate and time.">
+
+<title>Simple Interest Calculator — Chanvika Calculator</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container nav">
+
+<a class="brand" href="../index.html">
+Chanvika Calculator
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">Calculators</a>
+<a href="../faq.html">FAQs</a>
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+<a class="back" href="../index.html">← All calculators</a>
+
+<h1>Simple Interest Calculator</h1>
+
+<p>
+Calculate simple interest and the total amount using the principal,
+annual interest rate and time period.
+</p>
+
+
+<div class="calculator-box">
+
+<div class="fields">
+
+<label>
+Principal (₹)
+<input
+id="principal"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 10000"
+min="0">
+</label>
+
+
+<label>
+Annual Interest Rate (%)
+<input
+id="rate"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 8"
+min="0">
+</label>
+
+
+<label>
+Time (years)
+<input
+id="years"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 2"
+min="0">
+</label>
+
+</div>
+
+
+<button id="calculate">Calculate</button>
+
+
+<div id="result" class="result" aria-live="polite"></div>
+
+
+<p class="note">
+This calculator uses the standard simple interest formula:
+Interest = Principal × Rate × Time ÷ 100.
+</p>
+
+</div>
+
+
+<section class="content-section">
+
+<h2>What Is Simple Interest?</h2>
+
+<p>
+Simple interest is interest calculated only on the original principal
+amount. Unlike compound interest, previously earned interest is not
+added to the principal for future interest calculations.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Simple Interest Formula</h2>
+
+<p>
+The standard formula is:
+</p>
+
+<p>
+<strong>
+Simple Interest = (Principal × Rate × Time) ÷ 100
+</strong>
+</p>
+
+<p>
+The total amount is:
+</p>
+
+<p>
+<strong>
+Total Amount = Principal + Simple Interest
+</strong>
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Simple Interest Example</h2>
+
+<p>
+Suppose you invest or lend <strong>₹10,000</strong> at an annual interest
+rate of <strong>8%</strong> for <strong>2 years</strong>.
+</p>
+
+<p>
+Simple interest would be:
+<strong>₹1,600</strong>
+</p>
+
+<p>
+The total amount would therefore be:
+<strong>₹11,600</strong>.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use This Calculator</h2>
+
+<ol>
+<li>Enter the principal amount.</li>
+<li>Enter the annual interest rate.</li>
+<li>Enter the time period in years.</li>
+<li>Click <strong>Calculate</strong>.</li>
+<li>Review the interest and total amount.</li>
+</ol>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Simple Interest vs Compound Interest</h2>
+
+<p>
+With simple interest, interest is calculated on the original principal.
+With compound interest, interest can also be earned on previously
+accumulated interest.
+</p>
+
+<p>
+Therefore, compound interest can produce a different final amount,
+especially over longer periods.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<h3>What is the formula for simple interest?</h3>
+
+<p>
+Simple Interest = Principal × Rate × Time ÷ 100.
+</p>
+
+
+<h3>Does this calculator use annual interest rate?</h3>
+
+<p>
+Yes. Enter the interest rate as an annual percentage and the time in
+years.
+</p>
+
+
+<h3>Can I use this calculator for loans?</h3>
+
+<p>
+Yes, it can provide a basic simple-interest estimate. However, actual
+loan calculations may include fees, charges, different repayment
+structures or other terms.
+</p>
+
+
+<h3>What is the difference between interest and total amount?</h3>
+
+<p>
+Interest is the additional amount earned or charged. Total amount is
+the original principal plus the interest.
+</p>
+
+
+<h3>Is this Simple Interest Calculator free?</h3>
+
+<p>
+Yes. This calculator is available to use for free.
+</p>
+
+</section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Chanvika Calculator
+
+<div class="footer-links">
+
+<a href="../about.html">About Us</a>
+<a href="../faq.html">FAQs</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms-of-use.html">Terms of Use</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const principal = document.getElementById('principal');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+const result = document.getElementById('result');
+
+
+document.getElementById('calculate').onclick = () => {
+
+const p = Number(principal.value);
+const r = Number(rate.value);
+const t = Number(years.value);
+
+
+if (
+principal.value === '' ||
+rate.value === '' ||
+years.value === '' ||
+p <= 0 ||
+r < 0 ||
+t <= 0
+) {
+
+result.textContent = 'Enter valid values.';
+return;
+
+}
+
+
+const interest = p * r * t / 100;
+
+const total = p + interest;
+
+const averageYearlyInterest = interest / t;
+
+const averageMonthlyInterest = interest / (t * 12);
+
+
+result.innerHTML =
+`<b>Simple interest:</b> ₹${interest.toFixed(2)}<br>
+<b>Total amount:</b> ₹${total.toFixed(2)}<br>
+<b>Average yearly interest:</b> ₹${averageYearlyInterest.toFixed(2)}<br>
+<b>Average monthly interest:</b> ₹${averageMonthlyInterest.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
