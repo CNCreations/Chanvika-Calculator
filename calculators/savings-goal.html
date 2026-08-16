@@ -1,1 +1,396 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Savings Goal Calculator — free calculator from Chanvika Calculator."><title>Savings Goal Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Savings Goal Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Target Amount (₹)<input id="target" type="number" inputmode="decimal" step="any" placeholder="e.g. 100000" min="0"></label><label>Current Savings (₹)<input id="current" type="number" inputmode="decimal" step="any" placeholder="e.g. 10000" min="0"></label><label>Time to Goal (months)<input id="months" type="number" inputmode="decimal" step="1" placeholder="e.g. 12" min="1"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const t=+target.value,c=+current.value,m=+months.value;if(t<0||c<0||m<=0){result.textContent='Enter valid values.';return}const need=Math.max(0,t-c);result.innerHTML=`<b>Still needed:</b> ₹${need.toFixed(2)}<br><b>Monthly saving:</b> ₹${(need/m).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Free Savings Goal Calculator to calculate how much you need to save monthly, weekly and daily to reach your savings target.">
+
+  <title>Savings Goal Calculator — Calculate Savings Target | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Savings Goal Calculator</h1>
+
+  <p>
+    Find out how much you need to save each month, week and day to reach
+    your savings target.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Target Amount (₹)
+        <input
+          id="target"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Current Savings (₹)
+        <input
+          id="current"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Time to Goal (months)
+        <input
+          id="months"
+          type="number"
+          inputmode="decimal"
+          step="1"
+          placeholder="e.g. 12"
+          min="1"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      This calculator does not include investment returns, interest,
+      inflation, taxes or investment fees. It assumes that the remaining
+      amount is saved equally over the selected period.
+    </p>
+
+  </div>
+
+
+  <!-- What is savings goal -->
+
+  <section class="content-section">
+
+    <h2>What Is a Savings Goal?</h2>
+
+    <p>
+      A savings goal is a specific amount of money you want to accumulate
+      within a particular period.
+    </p>
+
+    <p>
+      Examples include saving for an emergency fund, wedding, education,
+      vehicle, holiday, business equipment or a large purchase.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Savings Goal Formula</h2>
+
+    <p>
+      The amount still required to reach your goal is:
+    </p>
+
+    <p>
+      <strong>
+        Amount Needed = Target Amount − Current Savings
+      </strong>
+    </p>
+
+    <p>
+      The required monthly saving is:
+    </p>
+
+    <p>
+      <strong>
+        Monthly Saving = Amount Needed ÷ Number of Months
+      </strong>
+    </p>
+
+    <p>
+      This calculator also provides approximate weekly and daily targets
+      based on the monthly requirement.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Savings Goal Example</h2>
+
+    <p>
+      Suppose your target is <strong>₹1,00,000</strong>, you already have
+      <strong>₹10,000</strong>, and you want to reach the goal in
+      <strong>12 months</strong>.
+    </p>
+
+    <p>
+      Amount still needed:
+      <strong>₹90,000</strong>
+    </p>
+
+    <p>
+      Required monthly saving:
+      <strong>₹7,500</strong>
+    </p>
+
+    <p>
+      So you would need to save approximately ₹7,500 per month to reach
+      the target in 12 months, assuming no investment returns or interest.
+    </p>
+
+  </section>
+
+
+  <!-- Progress -->
+
+  <section class="content-section">
+
+    <h2>Track Your Savings Progress</h2>
+
+    <p>
+      Your current savings can be compared with your target to understand
+      how much of the goal has already been completed.
+    </p>
+
+    <p>
+      For example, if your target is ₹1,00,000 and you already have ₹25,000,
+      you have completed approximately <strong>25%</strong> of your goal.
+    </p>
+
+  </section>
+
+
+  <!-- Planning -->
+
+  <section class="content-section">
+
+    <h2>How to Reach a Savings Goal</h2>
+
+    <ol>
+      <li>Set a specific target amount.</li>
+      <li>Determine how much you already have saved.</li>
+      <li>Choose a realistic deadline.</li>
+      <li>Calculate the required monthly saving.</li>
+      <li>Keep your savings separate from everyday spending.</li>
+      <li>Review your progress regularly.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Tips -->
+
+  <section class="content-section">
+
+    <h2>Tips for Reaching Your Savings Goal</h2>
+
+    <ul>
+      <li>Set an automatic savings amount if possible.</li>
+      <li>Track unnecessary expenses.</li>
+      <li>Save part of unexpected income.</li>
+      <li>Break a large goal into smaller monthly targets.</li>
+      <li>Review your target if your income or expenses change.</li>
+      <li>Keep an emergency fund separate from other savings goals.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important Information</h2>
+
+    <p>
+      This calculator assumes that you simply save the required amount
+      without earning interest or investment returns.
+    </p>
+
+    <p>
+      If your savings are invested and generate returns, the amount you
+      actually need to contribute may be different.
+    </p>
+
+    <p>
+      Actual results depend on your savings behaviour, returns, fees,
+      inflation and other financial factors.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How much should I save every month?</h3>
+
+    <p>
+      It depends on your target amount, existing savings and deadline.
+      This calculator estimates the monthly amount required based on those
+      values.
+    </p>
+
+
+    <h3>Does this calculator include interest?</h3>
+
+    <p>
+      No. The basic calculation assumes that your savings do not earn
+      interest or investment returns.
+    </p>
+
+
+    <h3>What if my current savings are already higher than my target?</h3>
+
+    <p>
+      The calculator will show that no additional amount is required to
+      reach the target.
+    </p>
+
+
+    <h3>Can I use this calculator for a wedding or business goal?</h3>
+
+    <p>
+      Yes. You can use it for weddings, travel, education, emergency funds,
+      business purchases and other savings goals.
+    </p>
+
+
+    <h3>Is this Savings Goal Calculator free?</h3>
+
+    <p>
+      Yes. You can use this calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const target = document.getElementById('target');
+const current = document.getElementById('current');
+const months = document.getElementById('months');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const t = Number(target.value);
+  const c = Number(current.value);
+  const m = Number(months.value);
+
+  if (
+    target.value === '' ||
+    current.value === '' ||
+    months.value === '' ||
+    t <= 0 ||
+    c < 0 ||
+    m <= 0
+  ) {
+    result.textContent = 'Enter valid savings goal details.';
+    return;
+  }
+
+  if (c > t) {
+
+    const extra = c - t;
+
+    result.innerHTML =
+      `<b>Goal already reached!</b><br>` +
+      `<b>Amount above target:</b> ₹${extra.toFixed(2)}<br>` +
+      `<b>Goal progress:</b> 100%`;
+
+    return;
+  }
+
+  const needed = t - c;
+
+  const monthly = needed / m;
+
+  const weekly = monthly * 12 / 52;
+
+  const daily = needed / (m * 30.4375);
+
+  const progress = (c / t) * 100;
+
+  result.innerHTML =
+    `<b>Amount still needed:</b> ₹${needed.toFixed(2)}<br>` +
+    `<b>Goal progress:</b> ${progress.toFixed(2)}%<br>` +
+    `<b>Monthly saving:</b> ₹${monthly.toFixed(2)}<br>` +
+    `<b>Weekly saving:</b> ₹${weekly.toFixed(2)}<br>` +
+    `<b>Daily saving:</b> ₹${daily.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
