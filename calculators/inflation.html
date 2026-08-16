@@ -1,1 +1,412 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Inflation Calculator — free calculator from Chanvika Calculator."><title>Inflation Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Inflation Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Today Amount (₹)<input id="amount" type="number" inputmode="decimal" step="any" placeholder="e.g. 100000" min="0"></label><label>Annual Inflation (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 6" min="0"></label><label>Years<input id="years" type="number" inputmode="decimal" step="any" placeholder="e.g. 10" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">This is a mathematical estimate; actual inflation varies over time and by category.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const a=+amount.value,r=+rate.value,t=+years.value;if(a<0||r<0||t<0){result.textContent='Enter valid values.';return}const f=a*Math.pow(1+r/100,t);result.innerHTML=`<b>Estimated future cost:</b> ₹${f.toFixed(2)}<br><b>Increase:</b> ₹${(f-a).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Free Inflation Calculator to estimate future costs and the effect of inflation on today's money over time.">
+
+  <title>Inflation Calculator — Calculate Future Cost | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Inflation Calculator</h1>
+
+  <p>
+    Estimate how much today's money or an expense could cost in the future
+    based on an assumed annual inflation rate.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Today Amount (₹)
+        <input
+          id="amount"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 100000"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Annual Inflation (%)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 6"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Years
+        <input
+          id="years"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      This is a mathematical estimate based on a constant annual inflation
+      rate. Actual inflation can vary over time and across products,
+      services and locations.
+    </p>
+
+  </div>
+
+
+  <!-- What is inflation -->
+
+  <section class="content-section">
+
+    <h2>What Is Inflation?</h2>
+
+    <p>
+      Inflation is the general increase in the prices of goods and services
+      over time. As prices rise, the purchasing power of the same amount of
+      money generally decreases.
+    </p>
+
+    <p>
+      For example, if an item costs ₹1,000 today and its price increases
+      consistently over several years, you may need more than ₹1,000 in the
+      future to purchase the same item.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Inflation Calculator Formula</h2>
+
+    <p>
+      The estimated future cost is calculated using:
+    </p>
+
+    <p>
+      <strong>
+        Future Cost = Present Cost × (1 + Inflation Rate)<sup>Years</sup>
+      </strong>
+    </p>
+
+    <p>
+      The annual inflation rate is converted into a decimal before applying
+      the formula.
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Inflation Calculation Example</h2>
+
+    <p>
+      Suppose something costs <strong>₹1,00,000</strong> today and you assume
+      an average annual inflation rate of <strong>6%</strong> for
+      <strong>10 years</strong>.
+    </p>
+
+    <p>
+      Using the compound inflation formula, the estimated future cost would
+      be approximately:
+    </p>
+
+    <p>
+      <strong>₹1,79,085.85</strong>
+    </p>
+
+    <p>
+      This means the estimated increase would be approximately:
+      <strong>₹79,085.85</strong>.
+    </p>
+
+    <p>
+      This does not predict the actual future price. It simply demonstrates
+      what would happen if inflation remained at 6% every year.
+    </p>
+
+  </section>
+
+
+  <!-- Purchasing power -->
+
+  <section class="content-section">
+
+    <h2>Inflation and Purchasing Power</h2>
+
+    <p>
+      Inflation affects purchasing power because the same amount of money may
+      buy fewer goods and services in the future.
+    </p>
+
+    <p>
+      For example, if prices increase significantly over a long period,
+      ₹1,00,000 saved today may not have the same purchasing power several
+      years from now.
+    </p>
+
+    <p>
+      This is one reason inflation is an important consideration when
+      planning long-term savings, investments and future expenses.
+    </p>
+
+  </section>
+
+
+  <!-- Future planning -->
+
+  <section class="content-section">
+
+    <h2>Why Use an Inflation Calculator?</h2>
+
+    <p>
+      An inflation calculator can help you estimate the future cost of
+      expenses such as:
+    </p>
+
+    <ul>
+      <li>Education</li>
+      <li>Wedding expenses</li>
+      <li>Home construction</li>
+      <li>Medical expenses</li>
+      <li>Travel</li>
+      <li>Vehicle purchases</li>
+      <li>Business expenses</li>
+      <li>Retirement expenses</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Long term example -->
+
+  <section class="content-section">
+
+    <h2>Why Long-Term Inflation Matters</h2>
+
+    <p>
+      Even a relatively moderate inflation rate can significantly affect
+      prices over long periods because inflation compounds year after year.
+    </p>
+
+    <p>
+      For example, an assumed 6% annual inflation rate does not mean that
+      prices increase by only 60% after ten years. The calculation compounds
+      each year's increase on the previous year's amount.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Inflation Calculator</h2>
+
+    <ol>
+      <li>Enter the current price or amount.</li>
+      <li>Enter an assumed annual inflation rate.</li>
+      <li>Enter the number of years.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>View the estimated future cost and increase.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important Information</h2>
+
+    <p>
+      Inflation does not necessarily remain constant every year. Different
+      categories such as food, education, housing, healthcare and fuel can
+      experience different rates of price change.
+    </p>
+
+    <p>
+      Therefore, this calculator should be treated as a planning estimate,
+      not a prediction of actual future prices.
+    </p>
+
+    <p>
+      For financial planning, consider using multiple inflation assumptions
+      rather than relying on a single rate.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What does an inflation rate mean?</h3>
+
+    <p>
+      An inflation rate represents the assumed annual percentage increase in
+      prices used for the calculation.
+    </p>
+
+
+    <h3>How does inflation affect money?</h3>
+
+    <p>
+      When prices rise, the purchasing power of a fixed amount of money
+      generally decreases.
+    </p>
+
+
+    <h3>Does this calculator predict actual inflation?</h3>
+
+    <p>
+      No. It calculates an estimate based on the constant annual inflation
+      rate entered by the user.
+    </p>
+
+
+    <h3>Why does inflation compound?</h3>
+
+    <p>
+      Each year's assumed increase is applied to the previous year's amount,
+      which causes the estimated future cost to compound over time.
+    </p>
+
+
+    <h3>Can I use this for retirement planning?</h3>
+
+    <p>
+      Yes, it can be useful for estimating how future expenses might change.
+      However, actual retirement planning should consider changing inflation,
+      investment returns, taxes and other financial factors.
+    </p>
+
+
+    <h3>Is this Inflation Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const amount = document.getElementById('amount');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const a = Number(amount.value);
+  const r = Number(rate.value);
+  const t = Number(years.value);
+
+  if (
+    amount.value === '' ||
+    rate.value === '' ||
+    years.value === '' ||
+    a <= 0 ||
+    r < 0 ||
+    t < 0
+  ) {
+    result.textContent = 'Enter valid values.';
+    return;
+  }
+
+  const futureCost = a * Math.pow(1 + r / 100, t);
+  const increase = futureCost - a;
+
+  result.innerHTML =
+    `<b>Estimated future cost:</b> ₹${futureCost.toFixed(2)}<br>` +
+    `<b>Increase:</b> ₹${increase.toFixed(2)}<br>` +
+    `<b>Increase percentage:</b> ${((futureCost / a - 1) * 100).toFixed(2)}%`;
+
+};
+
+</script>
+
+</body>
+</html>
