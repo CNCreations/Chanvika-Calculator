@@ -1,1 +1,468 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Wedding Budget Calculator — free calculator from Chanvika Calculator."><title>Wedding Budget Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Wedding Budget Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Venue / Food (₹)<input id="venue" type="number" inputmode="decimal" step="any" placeholder="e.g. 300000" min="0"></label><label>Decoration (₹)<input id="decor" type="number" inputmode="decimal" step="any" placeholder="e.g. 100000" min="0"></label><label>Photography / Video (₹)<input id="photo" type="number" inputmode="decimal" step="any" placeholder="e.g. 80000" min="0"></label><label>Clothes / Jewellery (₹)<input id="clothes" type="number" inputmode="decimal" step="any" placeholder="e.g. 150000" min="0"></label><label>Travel / Stay (₹)<input id="travel" type="number" inputmode="decimal" step="any" placeholder="e.g. 50000" min="0"></label><label>Other / Miscellaneous (₹)<input id="misc" type="number" inputmode="decimal" step="any" placeholder="e.g. 50000" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">Use your own vendor quotes and categories for a detailed wedding budget.</p></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const vals=[venue,decor,photo,clothes,travel,misc].map(x=>+x.value);if(vals.some(v=>v<0)){result.textContent='Enter valid amounts.';return}const total=vals.reduce((a,b)=>a+b,0);result.innerHTML=`<b>Estimated wedding budget:</b> ₹${total.toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Free Wedding Budget Calculator to estimate wedding expenses for venue, food, decoration, photography, clothes, travel and miscellaneous costs.">
+
+<title>Wedding Budget Calculator — Chanvika Calculator</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container nav">
+
+<a class="brand" href="../index.html">
+Chanvika Calculator
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">Calculators</a>
+<a href="../faq.html">FAQs</a>
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+<a class="back" href="../index.html">← All calculators</a>
+
+<h1>Wedding Budget Calculator</h1>
+
+<p>
+Estimate your wedding budget by entering expected expenses for different
+categories.
+</p>
+
+
+<div class="calculator-box">
+
+<div class="fields">
+
+<label>
+Venue / Food (₹)
+<input
+id="venue"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 300000"
+min="0">
+</label>
+
+
+<label>
+Decoration (₹)
+<input
+id="decor"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 100000"
+min="0">
+</label>
+
+
+<label>
+Photography / Video (₹)
+<input
+id="photo"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 80000"
+min="0">
+</label>
+
+
+<label>
+Clothes / Jewellery (₹)
+<input
+id="clothes"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 150000"
+min="0">
+</label>
+
+
+<label>
+Travel / Stay (₹)
+<input
+id="travel"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 50000"
+min="0">
+</label>
+
+
+<label>
+Other / Miscellaneous (₹)
+<input
+id="misc"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 50000"
+min="0">
+</label>
+
+
+<label>
+Number of Guests
+<input
+id="guests"
+type="number"
+inputmode="decimal"
+step="1"
+placeholder="e.g. 200"
+min="1">
+</label>
+
+
+<label>
+Contingency / Emergency Reserve (%)
+<input
+id="reserve"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 10"
+min="0">
+</label>
+
+</div>
+
+
+<button id="calculate">Calculate</button>
+
+
+<div id="result" class="result" aria-live="polite"></div>
+
+
+<p class="note">
+This is an estimate based on the amounts you enter. Actual wedding costs
+depend on location, vendors, guest count, dates, services and personal
+preferences.
+</p>
+
+</div>
+
+
+<section class="content-section">
+
+<h2>What Is a Wedding Budget Calculator?</h2>
+
+<p>
+A wedding budget calculator helps you estimate how much you may need to
+spend across major wedding categories.
+</p>
+
+<p>
+It can help couples and families organise expected expenses before
+booking venues, vendors and other services.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Wedding Expenses Included</h2>
+
+<ul>
+<li>Venue and food</li>
+<li>Decoration</li>
+<li>Photography and video</li>
+<li>Clothes and jewellery</li>
+<li>Travel and accommodation</li>
+<li>Miscellaneous expenses</li>
+<li>Emergency or contingency reserve</li>
+</ul>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use This Calculator</h2>
+
+<ol>
+<li>Enter your estimated venue and food cost.</li>
+<li>Enter the expected decoration cost.</li>
+<li>Enter photography and video expenses.</li>
+<li>Enter clothing and jewellery expenses.</li>
+<li>Enter travel and accommodation costs.</li>
+<li>Add other expected expenses.</li>
+<li>Enter the number of guests if you want the per-guest estimate.</li>
+<li>Optionally add a contingency percentage.</li>
+<li>Click <strong>Calculate</strong>.</li>
+</ol>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Why Keep a Contingency Budget?</h2>
+
+<p>
+Wedding expenses can change during planning. Additional guests, last-minute
+purchases, transportation changes, vendor upgrades or unexpected charges
+can increase the final cost.
+</p>
+
+<p>
+Keeping a contingency reserve can provide some flexibility for unexpected
+expenses.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Wedding Budget Example</h2>
+
+<p>
+Suppose your estimated expenses are:
+</p>
+
+<ul>
+<li>Venue / Food: ₹3,00,000</li>
+<li>Decoration: ₹1,00,000</li>
+<li>Photography: ₹80,000</li>
+<li>Clothes / Jewellery: ₹1,50,000</li>
+<li>Travel / Stay: ₹50,000</li>
+<li>Miscellaneous: ₹50,000</li>
+</ul>
+
+<p>
+Your base wedding budget would be <strong>₹7,30,000</strong>.
+</p>
+
+<p>
+If you keep a 10% contingency reserve, an additional amount of
+approximately <strong>₹73,000</strong> would be added.
+</p>
+
+<p>
+The estimated budget including the reserve would therefore be
+<strong>₹8,03,000</strong>.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<h3>Does this calculator give the actual wedding cost?</h3>
+
+<p>
+No. It provides an estimate based on the amounts you enter. Actual costs
+depend on your vendors, location, wedding date, guest count and choices.
+</p>
+
+
+<h3>What should I include in miscellaneous expenses?</h3>
+
+<p>
+You can include invitations, gifts, makeup, transportation, permits,
+small purchases and other expenses that do not fit into the main
+categories.
+</p>
+
+
+<h3>What is a contingency reserve?</h3>
+
+<p>
+A contingency reserve is extra money kept aside for unexpected or
+additional wedding expenses.
+</p>
+
+
+<h3>Can I use this calculator for a small wedding?</h3>
+
+<p>
+Yes. The calculator works for small, medium or large weddings. Simply
+enter the amounts that apply to your event.
+</p>
+
+
+<h3>Can I calculate the cost per guest?</h3>
+
+<p>
+Yes. Enter the number of guests and the calculator will estimate the
+average wedding budget per guest.
+</p>
+
+
+<h3>Is this Wedding Budget Calculator free?</h3>
+
+<p>
+Yes. The calculator is free to use.
+</p>
+
+</section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Chanvika Calculator
+
+<div class="footer-links">
+
+<a href="../about.html">About Us</a>
+<a href="../faq.html">FAQs</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms-of-use.html">Terms of Use</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const venue = document.getElementById('venue');
+const decor = document.getElementById('decor');
+const photo = document.getElementById('photo');
+const clothes = document.getElementById('clothes');
+const travel = document.getElementById('travel');
+const misc = document.getElementById('misc');
+const guests = document.getElementById('guests');
+const reserve = document.getElementById('reserve');
+
+const result = document.getElementById('result');
+
+
+function money(value) {
+
+return value.toLocaleString('en-IN', {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2
+});
+
+}
+
+
+document.getElementById('calculate').onclick = () => {
+
+const values = [
+Number(venue.value),
+Number(decor.value),
+Number(photo.value),
+Number(clothes.value),
+Number(travel.value),
+Number(misc.value)
+];
+
+const guestCount = Number(guests.value);
+
+const reserveRate = Number(reserve.value);
+
+
+if (
+values.some(v => v < 0) ||
+guestCount < 0 ||
+reserveRate < 0
+) {
+
+result.textContent = 'Enter valid amounts.';
+return;
+
+}
+
+
+const baseBudget = values.reduce((a,b) => a + b, 0);
+
+const reserveAmount = baseBudget * reserveRate / 100;
+
+const totalBudget = baseBudget + reserveAmount;
+
+
+const perGuest =
+guestCount > 0
+? totalBudget / guestCount
+: 0;
+
+
+const venuePercent =
+baseBudget > 0
+? values[0] / baseBudget * 100
+: 0;
+
+const decorPercent =
+baseBudget > 0
+? values[1] / baseBudget * 100
+: 0;
+
+const photoPercent =
+baseBudget > 0
+? values[2] / baseBudget * 100
+: 0;
+
+const clothesPercent =
+baseBudget > 0
+? values[3] / baseBudget * 100
+: 0;
+
+const travelPercent =
+baseBudget > 0
+? values[4] / baseBudget * 100
+: 0;
+
+const miscPercent =
+baseBudget > 0
+? values[5] / baseBudget * 100
+: 0;
+
+
+result.innerHTML =
+
+`<b>Base wedding budget:</b> ₹${money(baseBudget)}<br>
+<b>Contingency reserve:</b> ₹${money(reserveAmount)} (${reserveRate.toFixed(2)}%)<br>
+<b>Estimated total budget:</b> ₹${money(totalBudget)}<br><br>
+
+<b>Venue / Food:</b> ₹${money(values[0])} (${venuePercent.toFixed(1)}%)<br>
+<b>Decoration:</b> ₹${money(values[1])} (${decorPercent.toFixed(1)}%)<br>
+<b>Photography / Video:</b> ₹${money(values[2])} (${photoPercent.toFixed(1)}%)<br>
+<b>Clothes / Jewellery:</b> ₹${money(values[3])} (${clothesPercent.toFixed(1)}%)<br>
+<b>Travel / Stay:</b> ₹${money(values[4])} (${travelPercent.toFixed(1)}%)<br>
+<b>Miscellaneous:</b> ₹${money(values[5])} (${miscPercent.toFixed(1)}%)<br><br>
+
+${guestCount > 0
+? `<b>Estimated cost per guest:</b> ₹${money(perGuest)}`
+: `<b>Cost per guest:</b> Enter guest count to calculate.`
+}`;
+
+};
+
+</script>
+
+</body>
+</html>
