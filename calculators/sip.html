@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="SIP Calculator — calculate estimated investment, returns and future value of your monthly SIP investment.">
+
+<title>SIP Calculator — Chanvika Calculator</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="container nav">
+
+<a class="brand" href="../index.html">
+Chanvika Calculator
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">Calculators</a>
+<a href="../faq.html">FAQs</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="container page">
+
+<a class="back" href="../index.html">← All calculators</a>
+
+<h1>SIP Calculator</h1>
+
+<p>
+Calculate the estimated future value of your monthly SIP investment based
+on your investment amount, expected annual return and investment period.
+</p>
+
+
+<div class="calculator-box">
+
+<div class="fields">
+
+<label>
+Monthly SIP Investment (₹)
+<input
+id="monthly"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 5000"
+min="0">
+</label>
+
+
+<label>
+Expected Annual Return (%)
+<input
+id="rate"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 12"
+min="0">
+</label>
+
+
+<label>
+Investment Period (Years)
+<input
+id="years"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 10"
+min="0.1">
+</label>
+
+</div>
+
+
+<button id="calculate">
+Calculate
+</button>
+
+
+<div id="result" class="result" aria-live="polite"></div>
+
+
+<p class="note">
+SIP returns are market-linked and not guaranteed. This calculator provides
+a mathematical estimate based on the expected annual return entered by you.
+Actual investment returns may be higher or lower.
+</p>
+
+</div>
+
+
+<section class="content-section">
+
+<h2>What Is a SIP?</h2>
+
+<p>
+A Systematic Investment Plan (SIP) allows an investor to invest a fixed
+amount at regular intervals, commonly every month, into a mutual fund or
+other investment product.
+</p>
+
+<p>
+SIP investing can help investors invest regularly instead of investing a
+large amount all at once.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use the SIP Calculator</h2>
+
+<ol>
+
+<li>Enter your monthly SIP amount.</li>
+
+<li>Enter your expected annual return.</li>
+
+<li>Enter the number of years you plan to invest.</li>
+
+<li>Click <strong>Calculate</strong>.</li>
+
+</ol>
+
+<p>
+The calculator will estimate your total investment, estimated returns and
+future value.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>SIP Calculator Example</h2>
+
+<p>
+Suppose you invest <strong>₹5,000 per month</strong> for
+<strong>10 years</strong> and assume an annual return of
+<strong>12%</strong>.
+</p>
+
+<p>
+The calculator will show the approximate amount invested, estimated
+returns and total future value based on that assumption.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<h3>Are SIP returns guaranteed?</h3>
+
+<p>
+No. SIP investments in market-linked products such as mutual funds do not
+guarantee a fixed return. The actual return depends on market performance.
+</p>
+
+
+<h3>What annual return should I enter?</h3>
+
+<p>
+Enter an assumed annual return for estimation purposes. You can compare
+different scenarios by trying different return percentages.
+</p>
+
+
+<h3>Can I use this calculator for different SIP amounts?</h3>
+
+<p>
+Yes. You can enter any reasonable monthly SIP amount and change it to
+compare different investment scenarios.
+</p>
+
+
+<h3>Does the calculator include taxes or fees?</h3>
+
+<p>
+No. This calculator provides a mathematical estimate and does not account
+for taxes, exit loads, fund expenses or other investment-specific charges.
+</p>
+
+
+<h3>Can I use this calculator for long-term investing?</h3>
+
+<p>
+Yes. You can enter longer investment periods to see how regular
+contributions and assumed returns may affect the estimated future value.
+</p>
+
+
+<h3>Is this SIP Calculator free?</h3>
+
+<p>
+Yes. Chanvika Calculator provides this calculator free to use.
+</p>
+
+</section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Chanvika Calculator
+
+<div class="footer-links">
+
+<a href="../about.html">About Us</a>
+<a href="../faq.html">FAQs</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms-of-use.html">Terms of Use</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const monthly = document.getElementById('monthly');
+const rate = document.getElementById('rate');
+const years = document.getElementById('years');
+
+const result = document.getElementById('result');
+
+
+function money(value) {
+
+return value.toLocaleString('en-IN', {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2
+});
+
+}
+
+
+document.getElementById('calculate').onclick = () => {
+
+const P = Number(monthly.value);
+const annualRate = Number(rate.value);
+const Y = Number(years.value);
+
+
+if (P <= 0 || annualRate < 0 || Y <= 0) {
+
+result.textContent = 'Enter valid SIP details.';
+return;
+
+}
+
+
+const months = Math.round(Y * 12);
+
+const monthlyRate = annualRate / 12 / 100;
+
+
+/*
+SIP future value formula:
+
+FV = P × [((1+r)^n - 1) / r] × (1+r)
+
+For 0% return:
+FV = P × n
+*/
+
+let futureValue;
+
+if (monthlyRate === 0) {
+
+futureValue = P * months;
+
+} else {
+
+futureValue =
+P *
+(
+(Math.pow(1 + monthlyRate, months) - 1)
+/
+monthlyRate
+) *
+(1 + monthlyRate);
+
+}
+
+
+const investedAmount = P * months;
+
+const estimatedReturns = futureValue - investedAmount;
+
+
+result.innerHTML =
+
+`<b>Monthly SIP:</b> ₹${money(P)}<br>
+<b>Investment period:</b> ${months} months (${Y} years)<br>
+<b>Total invested:</b> ₹${money(investedAmount)}<br>
+<b>Estimated returns:</b> ₹${money(estimatedReturns)}<br>
+<b>Estimated future value:</b> ₹${money(futureValue)}`;
+
+};
+
+</script>
+
+</body>
+
+</html>
