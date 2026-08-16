@@ -1,1 +1,329 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Tip Calculator — free calculator from Chanvika Calculator."><title>Tip Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Tip Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Bill Amount (₹)<input id="bill" type="number" inputmode="decimal" step="any" placeholder="e.g. 1500" min="0"></label><label>Tip (%)<input id="rate" type="number" inputmode="decimal" step="any" placeholder="e.g. 10" min="0"></label><label>Number of People<input id="people" type="number" inputmode="decimal" step="1" placeholder="e.g. 3" min="1"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const b=+bill.value,r=+rate.value,p=+people.value;if(b<0||r<0||p<=0){result.textContent='Enter valid values.';return}const t=b*r/100;result.innerHTML=`<b>Tip:</b> ₹${t.toFixed(2)}<br><b>Total:</b> ₹${(b+t).toFixed(2)}<br><b>Per person:</b> ₹${((b+t)/p).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description" content="Free Tip Calculator to calculate tip amount, total bill and per-person payment.">
+
+<title>Tip Calculator — Chanvika Calculator</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<div class="container nav">
+
+<a class="brand" href="../index.html">
+Chanvika Calculator
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">Calculators</a>
+<a href="../faq.html">FAQs</a>
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+<a class="back" href="../index.html">← All calculators</a>
+
+<h1>Tip Calculator</h1>
+
+<p>
+Calculate the tip amount, total bill and how much each person should pay.
+</p>
+
+
+<div class="calculator-box">
+
+<div class="fields">
+
+<label>
+Bill Amount (₹)
+<input
+id="bill"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 1500"
+min="0">
+</label>
+
+
+<label>
+Tip (%)
+<input
+id="rate"
+type="number"
+inputmode="decimal"
+step="any"
+placeholder="e.g. 10"
+min="0">
+</label>
+
+
+<label>
+Number of People
+<input
+id="people"
+type="number"
+inputmode="decimal"
+step="1"
+placeholder="e.g. 3"
+min="1">
+</label>
+
+</div>
+
+
+<button id="calculate">Calculate</button>
+
+
+<div id="result" class="result" aria-live="polite"></div>
+
+
+<p class="note">
+The tip percentage is calculated on the bill amount before the tip is
+added. This calculator does not include taxes or service charges.
+</p>
+
+</div>
+
+
+<section class="content-section">
+
+<h2>What Is a Tip Calculator?</h2>
+
+<p>
+A tip calculator helps you quickly calculate how much tip to leave on a
+restaurant, café, hotel or other service bill.
+</p>
+
+<p>
+It can also divide the final amount equally between multiple people.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Calculate a Tip</h2>
+
+<p>
+The basic formula is:
+</p>
+
+<p>
+<strong>
+Tip = Bill Amount × Tip Percentage ÷ 100
+</strong>
+</p>
+
+<p>
+The total bill is:
+</p>
+
+<p>
+<strong>
+Total Bill = Bill Amount + Tip
+</strong>
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Tip Calculator Example</h2>
+
+<p>
+Suppose a restaurant bill is <strong>₹1,500</strong> and you want to leave
+a <strong>10%</strong> tip for <strong>3 people</strong>.
+</p>
+
+<p>
+The tip would be <strong>₹150</strong>.
+</p>
+
+<p>
+The total bill would be <strong>₹1,650</strong>.
+</p>
+
+<p>
+If the bill is divided equally, each person would pay
+<strong>₹550</strong>.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>How to Use This Calculator</h2>
+
+<ol>
+<li>Enter the bill amount.</li>
+<li>Enter the desired tip percentage.</li>
+<li>Enter the number of people sharing the bill.</li>
+<li>Click <strong>Calculate</strong>.</li>
+<li>Review the tip and payment amount.</li>
+</ol>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Tip Percentage Examples</h2>
+
+<ul>
+<li><strong>5%</strong> — small tip</li>
+<li><strong>10%</strong> — common basic tip calculation</li>
+<li><strong>15%</strong> — moderate tip</li>
+<li><strong>20%</strong> — generous tip</li>
+</ul>
+
+<p>
+Tip customs can vary by country, business and situation. Check whether a
+service charge has already been included in the bill before adding an
+additional tip.
+</p>
+
+</section>
+
+
+<section class="content-section">
+
+<h2>Frequently Asked Questions</h2>
+
+
+<h3>Is the tip calculated before or after tax?</h3>
+
+<p>
+This calculator calculates the tip on the bill amount you enter. If your
+entered bill already includes taxes, the tip will be calculated on that
+amount.
+</p>
+
+
+<h3>Can I split the bill between multiple people?</h3>
+
+<p>
+Yes. Enter the number of people and the calculator will show the equal
+amount each person needs to pay.
+</p>
+
+
+<h3>Does this calculator include service charges?</h3>
+
+<p>
+No. Service charges are not automatically included. Enter the amount you
+want to use as the bill amount.
+</p>
+
+
+<h3>Can I use a 0% tip?</h3>
+
+<p>
+Yes. A 0% tip will simply return the original bill amount as the total.
+</p>
+
+
+<h3>Is this Tip Calculator free?</h3>
+
+<p>
+Yes. The calculator is free to use.
+</p>
+
+</section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+<div class="container">
+
+© 2026 Chanvika Calculator
+
+<div class="footer-links">
+
+<a href="../about.html">About Us</a>
+<a href="../faq.html">FAQs</a>
+<a href="../privacy-policy.html">Privacy Policy</a>
+<a href="../terms-of-use.html">Terms of Use</a>
+<a href="../disclaimer.html">Disclaimer</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const bill = document.getElementById('bill');
+const rate = document.getElementById('rate');
+const people = document.getElementById('people');
+const result = document.getElementById('result');
+
+
+document.getElementById('calculate').onclick = () => {
+
+const b = Number(bill.value);
+const r = Number(rate.value);
+const p = Number(people.value);
+
+
+if (
+bill.value === '' ||
+rate.value === '' ||
+people.value === '' ||
+b <= 0 ||
+r < 0 ||
+p <= 0
+) {
+
+result.textContent = 'Enter valid values.';
+return;
+
+}
+
+
+const tip = b * r / 100;
+
+const total = b + tip;
+
+const tipPerPerson = tip / p;
+
+const billPerPerson = b / p;
+
+const totalPerPerson = total / p;
+
+
+result.innerHTML =
+`<b>Bill before tip:</b> ₹${b.toFixed(2)}<br>
+<b>Tip:</b> ₹${tip.toFixed(2)}<br>
+<b>Total bill:</b> ₹${total.toFixed(2)}<br>
+<b>Tip per person:</b> ₹${tipPerPerson.toFixed(2)}<br>
+<b>Bill per person:</b> ₹${billPerPerson.toFixed(2)}<br>
+<b>Total per person:</b> ₹${totalPerPerson.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
