@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Contact Chanvika Calculator for questions, calculator feedback, suggestions, or to report an error.">
+
+  <title>Contact Us — Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N12THJ0KL1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N12THJ0KL1');
+  </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="index.html">Chanvika Calculator</a>
+
+    <span class="tagline">Smart Calculators for Everyday India</span>
+
+    <nav class="nav-links">
+      <a href="index.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <section class="container page">
+
+    <a class="back" href="index.html">← All calculators</a>
+
+    <h1>Contact Us</h1>
+
+    <p>
+      Have a question, suggestion, or feedback about Chanvika Calculator?
+      We'd love to hear from you.
+    </p>
+
+    <div class="calculator-box">
+
+      <h2>Get in Touch</h2>
+
+      <p>
+        For general questions, calculator feedback, suggestions, or website-related
+        issues, you can contact us by email.
+      </p>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:venturescn0@gmail.com">venturescn0@gmail.com</a>
+      </p>
+
+    </div>
+
+    <section>
+
+      <h2>What Can You Contact Us About?</h2>
+
+      <h3>General Questions</h3>
+
+      <p>
+        If you have questions about Chanvika Calculator, its calculators,
+        features, or how to use a particular tool, feel free to contact us.
+      </p>
+
+      <h3>Calculator Feedback</h3>
+
+      <p>
+        We welcome feedback that can help us make our calculators easier,
+        clearer, and more useful.
+      </p>
+
+      <h3>Report a Calculation or Website Error</h3>
+
+      <p>
+        If you believe a calculator is producing an incorrect result or you
+        notice a broken link, missing page, or other website issue, please
+        contact us and include the calculator name and details of the issue.
+      </p>
+
+      <h3>Suggestions</h3>
+
+      <p>
+        Have an idea for a new calculator or a feature that would make
+        Chanvika Calculator more useful? Send us your suggestion.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Before Contacting Us</h2>
+
+      <p>
+        When reporting a calculator issue, please include enough information
+        for us to understand the problem. For example, mention the calculator
+        you were using, the values you entered, and the result you expected.
+      </p>
+
+      <p>
+        Please do not send passwords, payment information, identity documents,
+        or other sensitive personal information by email.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Response Time</h2>
+
+      <p>
+        We aim to review and respond to relevant messages as soon as reasonably
+        possible. Response times may vary depending on the nature and volume
+        of inquiries.
+      </p>
+
+    </section>
+
+    <section>
+
+      <h2>Other Pages</h2>
+
+      <p>
+        You may also find the following pages useful:
+      </p>
+
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+
+    </section>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
