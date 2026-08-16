@@ -1,1 +1,538 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Markup Calculator — free calculator from Chanvika Calculator."><title>Markup Calculator — Chanvika Calculator</title><link rel="stylesheet" href="../style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a></nav></div></header><main><section class="container page"><a class="back" href="../index.html">← All calculators</a><h1>Markup Calculator</h1><p>Enter the values below to get an instant estimate.</p><div class="calculator-box"><div class="fields"><label>Cost Price (₹)<input id="cost" type="number" inputmode="decimal" step="any" placeholder="e.g. 500" min="0"></label><label>Markup (%)<input id="markup" type="number" inputmode="decimal" step="any" placeholder="e.g. 30" min="0"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div></div></section></main><footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer><script>document.getElementById('calculate').onclick=()=>{const result=document.getElementById('result');const c=+cost.value,m=+markup.value;if(c<0||m<0){result.textContent='Enter valid values.';return}const a=c*m/100;result.innerHTML=`<b>Markup:</b> ₹${a.toFixed(2)}<br><b>Selling price:</b> ₹${(c+a).toFixed(2)}`;};</script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <meta name="description" content="Free Jewellery Price Calculator to estimate jewellery cost using metal weight, metal rate, wastage, making charges and GST.">
+
+  <title>Jewellery Price Calculator — Estimate Jewellery Cost | Chanvika Calculator</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+
+    <a class="brand" href="../index.html">
+      Chanvika Calculator
+    </a>
+
+    <nav class="nav-links">
+      <a href="../index.html">Calculators</a>
+      <a href="../faq.html">FAQs</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+<section class="container page">
+
+  <a class="back" href="../index.html">← All calculators</a>
+
+  <h1>Jewellery Price Calculator</h1>
+
+  <p>
+    Estimate the price of jewellery using metal weight, metal rate, wastage,
+    making charges and GST.
+  </p>
+
+
+  <!-- Calculator -->
+
+  <div class="calculator-box">
+
+    <div class="fields">
+
+      <label>
+        Metal Weight (grams)
+        <input
+          id="weight"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Metal Rate (₹/gram)
+        <input
+          id="rate"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 6500"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Making Charge (%)
+        <input
+          id="making"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 10"
+          min="0"
+        >
+      </label>
+
+      <label>
+        Wastage (%)
+        <input
+          id="wastage"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 3"
+          min="0"
+        >
+      </label>
+
+      <label>
+        GST (%)
+        <input
+          id="gst"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          placeholder="e.g. 3"
+          min="0"
+        >
+      </label>
+
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div id="result" class="result" aria-live="polite"></div>
+
+    <p class="note">
+      Jewellery pricing varies by purity, metal rate, wastage, making charges,
+      taxes and jeweller. This calculator provides an estimate only. Verify
+      the final invoice before making a purchase.
+    </p>
+
+  </div>
+
+
+  <!-- What is jewellery pricing -->
+
+  <section class="content-section">
+
+    <h2>How Is Jewellery Price Calculated?</h2>
+
+    <p>
+      Jewellery pricing can include several components. These may include
+      the value of the precious metal, wastage charges, making charges and
+      applicable taxes.
+    </p>
+
+    <p>
+      The exact pricing method can differ between jewellers and jewellery
+      products, so the calculator should be treated as an estimate rather
+      than an official quotation.
+    </p>
+
+  </section>
+
+
+  <!-- Formula -->
+
+  <section class="content-section">
+
+    <h2>Jewellery Price Calculation Formula</h2>
+
+    <p>
+      The basic metal value is calculated as:
+    </p>
+
+    <p>
+      <strong>
+        Metal Value = Weight × Metal Rate
+      </strong>
+    </p>
+
+    <p>
+      Estimated wastage value is calculated as:
+    </p>
+
+    <p>
+      <strong>
+        Wastage Value = Metal Value × Wastage % ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      In this calculator, making charges are calculated on the metal value
+      plus the estimated wastage value:
+    </p>
+
+    <p>
+      <strong>
+        Making Charge = (Metal Value + Wastage Value) × Making % ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      The taxable subtotal is:
+    </p>
+
+    <p>
+      <strong>
+        Subtotal = Metal Value + Wastage Value + Making Charge
+      </strong>
+    </p>
+
+    <p>
+      Finally:
+    </p>
+
+    <p>
+      <strong>
+        GST = Subtotal × GST % ÷ 100
+      </strong>
+    </p>
+
+    <p>
+      <strong>
+        Estimated Total = Subtotal + GST
+      </strong>
+    </p>
+
+  </section>
+
+
+  <!-- Example -->
+
+  <section class="content-section">
+
+    <h2>Jewellery Price Calculation Example</h2>
+
+    <p>
+      Suppose you are purchasing jewellery with the following values:
+    </p>
+
+    <ul>
+      <li>Weight: <strong>10 grams</strong></li>
+      <li>Metal rate: <strong>₹6,500/gram</strong></li>
+      <li>Wastage: <strong>3%</strong></li>
+      <li>Making charge: <strong>10%</strong></li>
+      <li>GST: <strong>3%</strong></li>
+    </ul>
+
+    <p>
+      Metal Value = 10 × ₹6,500 =
+      <strong>₹65,000</strong>
+    </p>
+
+    <p>
+      Wastage Value = 3% of ₹65,000 =
+      <strong>₹1,950</strong>
+    </p>
+
+    <p>
+      Making Charge = 10% of ₹66,950 =
+      <strong>₹6,695</strong>
+    </p>
+
+    <p>
+      Subtotal =
+      <strong>₹73,645</strong>
+    </p>
+
+    <p>
+      GST at 3% =
+      <strong>₹2,209.35</strong>
+    </p>
+
+    <p>
+      Estimated Total =
+      <strong>₹75,854.35</strong>
+    </p>
+
+  </section>
+
+
+  <!-- Purity -->
+
+  <section class="content-section">
+
+    <h2>Jewellery Purity and Metal Rate</h2>
+
+    <p>
+      Precious-metal jewellery may be sold in different purities. The
+      applicable metal rate can therefore depend on the purity and the
+      market rate used by the jeweller.
+    </p>
+
+    <p>
+      Always confirm whether the quoted rate is for the actual purity of
+      the jewellery you are purchasing.
+    </p>
+
+  </section>
+
+
+  <!-- Wastage -->
+
+  <section class="content-section">
+
+    <h2>What Is Wastage Charge?</h2>
+
+    <p>
+      Wastage is commonly used to represent an additional amount associated
+      with the manufacturing process. The way it is calculated can vary
+      between jewellers and products.
+    </p>
+
+    <p>
+      Therefore, the wastage calculation in this tool is a simplified
+      estimation method.
+    </p>
+
+  </section>
+
+
+  <!-- Making charges -->
+
+  <section class="content-section">
+
+    <h2>What Are Making Charges?</h2>
+
+    <p>
+      Making charges represent the cost associated with designing,
+      manufacturing and finishing jewellery.
+    </p>
+
+    <p>
+      Jewellers may calculate making charges as a percentage, a per-gram
+      amount or using another pricing method. This calculator uses a
+      percentage-based method.
+    </p>
+
+  </section>
+
+
+  <!-- How to use -->
+
+  <section class="content-section">
+
+    <h2>How to Use This Jewellery Price Calculator</h2>
+
+    <ol>
+      <li>Enter the jewellery weight in grams.</li>
+      <li>Enter the applicable metal rate per gram.</li>
+      <li>Enter the estimated wastage percentage.</li>
+      <li>Enter the making charge percentage.</li>
+      <li>Enter the applicable GST percentage.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Review the estimated total price.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- Buying tips -->
+
+  <section class="content-section">
+
+    <h2>Things to Check Before Buying Jewellery</h2>
+
+    <ul>
+      <li>Confirm the metal purity.</li>
+      <li>Check the weight mentioned on the invoice.</li>
+      <li>Check the metal rate being used.</li>
+      <li>Ask how wastage has been calculated.</li>
+      <li>Check the making charge.</li>
+      <li>Verify applicable taxes.</li>
+      <li>Review the complete invoice before payment.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- Important -->
+
+  <section class="content-section">
+
+    <h2>Important Information</h2>
+
+    <p>
+      This calculator does not determine the official market price of gold,
+      silver, platinum or any other metal.
+    </p>
+
+    <p>
+      It also does not determine the legally applicable tax rate, purity,
+      hallmarking requirements or a jeweller's pricing policy.
+    </p>
+
+    <p>
+      The actual invoice may differ from this estimate. Always verify the
+      final price and applicable charges with the jeweller.
+    </p>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="content-section">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>How is jewellery price calculated?</h3>
+
+    <p>
+      Jewellery price can include metal value, wastage, making charges and
+      applicable taxes. The exact calculation can vary by jeweller.
+    </p>
+
+
+    <h3>What is the metal value?</h3>
+
+    <p>
+      Metal value is the jewellery weight multiplied by the applicable
+      metal rate per gram.
+    </p>
+
+
+    <h3>What is wastage?</h3>
+
+    <p>
+      Wastage is an additional amount associated with jewellery manufacturing.
+      Its calculation can vary between jewellers.
+    </p>
+
+
+    <h3>What are making charges?</h3>
+
+    <p>
+      Making charges are charges associated with designing, manufacturing
+      and finishing the jewellery.
+    </p>
+
+
+    <h3>Can making charges be calculated differently?</h3>
+
+    <p>
+      Yes. Some jewellers may use a percentage, per-gram charge or another
+      pricing method. This calculator uses a percentage-based method.
+    </p>
+
+
+    <h3>Is this Jewellery Price Calculator accurate?</h3>
+
+    <p>
+      It provides a mathematical estimate based on the values entered.
+      The final jewellery price can differ depending on purity, jeweller,
+      market rate, charges and applicable taxes.
+    </p>
+
+
+    <h3>Is this Jewellery Price Calculator free?</h3>
+
+    <p>
+      Yes. You can use the calculator for free.
+    </p>
+
+  </section>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container">
+
+    © 2026 Chanvika Calculator
+
+    <div class="footer-links">
+      <a href="../about.html">About Us</a>
+      <a href="../faq.html">FAQs</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../terms-of-use.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const weight = document.getElementById('weight');
+const rate = document.getElementById('rate');
+const making = document.getElementById('making');
+const wastage = document.getElementById('wastage');
+const gst = document.getElementById('gst');
+const result = document.getElementById('result');
+
+document.getElementById('calculate').onclick = () => {
+
+  const w = Number(weight.value);
+  const r = Number(rate.value);
+  const m = Number(making.value);
+  const wa = Number(wastage.value);
+  const g = Number(gst.value);
+
+  if (
+    weight.value === '' ||
+    rate.value === '' ||
+    making.value === '' ||
+    wastage.value === '' ||
+    gst.value === '' ||
+    w <= 0 ||
+    r < 0 ||
+    m < 0 ||
+    wa < 0 ||
+    g < 0
+  ) {
+    result.textContent = 'Enter valid jewellery details.';
+    return;
+  }
+
+  const metalValue = w * r;
+
+  const wastageValue =
+    metalValue * wa / 100;
+
+  const makingCharge =
+    (metalValue + wastageValue) * m / 100;
+
+  const subtotal =
+    metalValue + wastageValue + makingCharge;
+
+  const gstAmount =
+    subtotal * g / 100;
+
+  const total =
+    subtotal + gstAmount;
+
+  result.innerHTML =
+    `<b>Metal value:</b> ₹${metalValue.toFixed(2)}<br>` +
+    `<b>Wastage:</b> ₹${wastageValue.toFixed(2)}<br>` +
+    `<b>Making charge:</b> ₹${makingCharge.toFixed(2)}<br>` +
+    `<b>Subtotal:</b> ₹${subtotal.toFixed(2)}<br>` +
+    `<b>GST:</b> ₹${gstAmount.toFixed(2)}<br>` +
+    `<b>Estimated total:</b> ₹${total.toFixed(2)}`;
+
+};
+
+</script>
+
+</body>
+</html>
