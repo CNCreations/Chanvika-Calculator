@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Calculate monthly cash flow by comparing total income with regular expenses and savings.">
+<title>Cash Flow Calculator — Chanvika Calculator</title>
+<link rel="stylesheet" href="../style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N12THJ0KL1"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-N12THJ0KL1');
+</script>
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
+<main><section class="container page"><a class="back" href="../index.html">← All calculators</a>
+<h1>Cash Flow Calculator</h1><p>Calculate monthly cash flow by comparing total income with regular expenses and savings.</p>
+<div class="calculator-box"><div class="fields"><label>Monthly income (₹)<input id="income" type="number" inputmode="decimal" step="any" min="0" placeholder="50000"></label>
+<label>Monthly business/household expenses (₹)<input id="expenses" type="number" inputmode="decimal" step="any" min="0" placeholder="30000"></label>
+<label>Monthly debt payments (₹)<input id="debt" type="number" inputmode="decimal" step="any" min="0" placeholder="5000"></label>
+<label>Other monthly outgo (₹)<input id="other" type="number" inputmode="decimal" step="any" min="0" placeholder="3000"></label></div><button id="calculate">Calculate</button><div id="result" class="result" aria-live="polite"></div><p class="note">Results are estimates for general informational purposes and may differ from actual financial, tax, lender or business outcomes.</p></div>
+<section><h2>What Does This Calculator Do?</h2><p>A simple cash-flow check shows how much money remains after regular monthly outflows.</p></section>
+<section><h2>Formula</h2><p>Monthly Cash Flow = Total Monthly Income − Total Monthly Outflows.</p></section>
+<section><h2>How to Use This Calculator</h2><ol><li>Enter the required values.</li><li>Check that your inputs are reasonable and use the correct units.</li><li>Click <strong>Calculate</strong> to view the estimate.</li><li>Adjust the inputs to compare different scenarios.</li></ol></section>
+<section><h2>Example</h2><p>Example: ₹50,000 income − ₹38,000 total outflows = ₹12,000 monthly surplus.</p></section>
+<section><h2>Important Notes</h2><p>Use this tool as a quick estimate. Actual results may depend on rates, taxes, fees, lender policies, market conditions, contracts, or other real-world factors.</p></section>
+<section><h2>Frequently Asked Questions</h2>
+<h3>Are the results exact?</h3><p>No. The calculator provides an estimate based on the information and assumptions you enter.</p>
+<h3>Can I use this calculator for planning?</h3><p>Yes. It can help compare scenarios and understand the effect of changing inputs before making a decision.</p>
+<h3>Should I verify the result?</h3><p>For financial, tax, lending or business decisions, verify important figures with the relevant provider or qualified professional.</p>
+</section>
+<section><h2>Related Calculators</h2><p>Explore other <a href="../index.html">Chanvika Calculator tools</a> for everyday finance, business, shopping and planning calculations.</p></section>
+</section></main>
+<footer class="footer"><div class="container">© 2026 Chanvika Calculator<div class="footer-links"><a href="../about.html">About Us</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact Us</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></div></div></footer>
+<script>const show=(x)=>document.getElementById('result').innerHTML=x;
+document.getElementById('calculate').onclick=()=>{const income=Number(document.getElementById('income').value), expenses=Number(document.getElementById('expenses').value), debt=Number(document.getElementById('debt').value), other=Number(document.getElementById('other').value);
+const flow=income-expenses-debt-other; show(`<b>Monthly cash flow:</b> ₹${flow.toFixed(2)}<br><b>Status:</b> ${flow>=0?'Surplus':'Deficit'}`);};</script>
+</body></html>
