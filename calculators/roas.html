@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -44,4 +45,5 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
 document.getElementById('calculate').onclick=()=>{const revenue=Number(document.getElementById('revenue').value), spend=Number(document.getElementById('spend').value);
 if(revenue<0||spend<=0) return show('Enter valid values.');
 const roas=revenue/spend; show(`<b>ROAS:</b> ${roas.toFixed(2)}×<br><b>ROAS percentage:</b> ${(roas*100).toFixed(2)}%`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>

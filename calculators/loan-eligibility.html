@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -47,4 +48,5 @@ document.getElementById('calculate').onclick=()=>{const income=Number(document.g
 if(income<=0||existing<0||annual<0||years<=0) return show('Enter valid values.');
 const maxEmi=Math.max(0,income*0.5-existing), r=annual/100/12,n=years*12,loan=r===0?maxEmi*n:maxEmi*(Math.pow(1+r,n)-1)/(r*Math.pow(1+r,n));
 show(`<b>Indicative maximum EMI:</b> ₹${maxEmi.toFixed(2)}<br><b>Indicative loan amount:</b> ₹${loan.toFixed(2)}`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>

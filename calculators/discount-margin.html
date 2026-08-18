@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -45,4 +46,5 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
 document.getElementById('calculate').onclick=()=>{const cost=Number(document.getElementById('cost').value), marked=Number(document.getElementById('marked').value), discount=Number(document.getElementById('discount').value);
 if(cost<0||marked<0||discount<0||discount>100) return show('Enter valid values.');
 const selling=marked*(1-discount/100), profit=selling-cost, margin=selling?profit/selling*100:0; show(`<b>Final selling price:</b> ₹${selling.toFixed(2)}<br><b>Profit/Loss:</b> ₹${profit.toFixed(2)}<br><b>Profit margin:</b> ${margin.toFixed(2)}%`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>

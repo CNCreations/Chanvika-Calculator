@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -45,4 +46,5 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
 <script>const show=(x)=>document.getElementById('result').innerHTML=x;
 document.getElementById('calculate').onclick=()=>{const income=Number(document.getElementById('income').value), expenses=Number(document.getElementById('expenses').value), debt=Number(document.getElementById('debt').value), other=Number(document.getElementById('other').value);
 const flow=income-expenses-debt-other; show(`<b>Monthly cash flow:</b> ₹${flow.toFixed(2)}<br><b>Status:</b> ${flow>=0?'Surplus':'Deficit'}`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>

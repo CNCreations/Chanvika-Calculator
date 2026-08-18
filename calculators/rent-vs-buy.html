@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -46,4 +47,5 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
 document.getElementById('calculate').onclick=()=>{const purchase=Number(document.getElementById('purchase').value), rent=Number(document.getElementById('rent').value), years=Number(document.getElementById('years').value), app=Number(document.getElementById('appreciation').value);
 if(purchase<0||rent<0||years<=0||app<0) return show('Enter valid values.');
 const future=purchase*Math.pow(1+app/100,years), totalRent=rent*12*years; show(`<b>Estimated future purchase value:</b> ₹${future.toFixed(2)}<br><b>Total rent over period:</b> ₹${totalRent.toFixed(2)}<br><small>This is a simplified comparison and excludes many ownership/investment costs.</small>`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>

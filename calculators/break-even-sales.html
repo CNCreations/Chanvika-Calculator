@@ -20,6 +20,7 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
   gtag('config', 'G-N12THJ0KL1');
 </script>
 </script>
+<link rel="manifest" href="../manifest.webmanifest">
 </head>
 <body>
 <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">Chanvika Calculator</a><nav class="nav-links"><a href="../index.html">Calculators</a><a href="../faq.html">FAQs</a><a href="../contact.html">Contact</a></nav></div></header>
@@ -45,4 +46,5 @@ gtag('js',new Date());gtag('config','G-N12THJ0KL1');
 document.getElementById('calculate').onclick=()=>{const fixed=Number(document.getElementById('fixed').value), price=Number(document.getElementById('price').value), variable=Number(document.getElementById('variable').value), contribution=price-variable;
 if(fixed<0||price<=0||variable<0||contribution<=0) return show('Selling price must be greater than variable cost.');
 const units=fixed/contribution; show(`<b>Break-even units:</b> ${units.toFixed(2)}<br><b>Break-even sales:</b> ₹${(units*price).toFixed(2)}`);};</script>
+<script src="../pwa-register.js"></script>
 </body></html>
