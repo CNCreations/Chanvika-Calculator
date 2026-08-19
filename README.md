@@ -1,23 +1,43 @@
-# Chanvika Calculator — MVP
+# Chanvika Calculator — 101 Calculator Edition
 
-Static, mobile-friendly calculator website for practical Indian money, business, shopping and everyday calculations.
+Chanvika Calculator is a free, static, mobile-friendly calculator website for practical Indian everyday, shopping, business, finance, investment, tax, travel, home, wedding and industrial calculations.
+
+## 101 calculator categories
+
+The site now contains **101 calculators**, organized into: 
+- Everyday & Shopping
+- Business & Retail
+- Money & Personal Finance
+- Loans & Banking
+- Investments & Wealth
+- Tax & Indian Finance
+- Travel & Fuel
+- Home & Utilities
+- Wedding & Events
+- Industrial & Operations
+
+The collection is designed to be useful from a small shop counter and household budget to business planning, investing and operational estimation.
 
 ## Included
-- 20 calculators
+- 101 calculators
+- Category-wise calculator navigation and search
 - Responsive design
-- Homepage calculator search
-- About Us
-- FAQs
-- Privacy Policy
-- Terms of Use
-- Disclaimer
-- robots.txt and sitemap.xml
+- PWA manifest and service worker
+- Chanvika Projects branding / C & N Creations
+- About Us, FAQs, Contact, Privacy Policy, Terms of Use and Disclaimer
+- Google Analytics (GA4) measurement ID: `G-N12THJ0KL1`
+- Google Search Console verification file/meta verification
+- `robots.txt` and a complete `sitemap.xml`
 - No backend, database, paid API or AI dependency
 
 ## Deployment
-Upload the complete folder to a static host. No build command is required.
+Upload the complete folder to a static host such as GitHub Pages. No build command is required. Keep the repository structure intact, especially the `calculators/` and `icons/` folders.
 
-## Before launch
-Review the legal pages for your actual business, add a real contact/support method, and update the privacy policy if you add analytics, ads, affiliate links, forms, accounts or server-side data collection.
+## Analytics & privacy
+Analytics are included to understand website usage. Review the Privacy Policy and update it if analytics, advertising, affiliate links, forms, accounts or other data collection changes.
 
-The calculators are estimates and should not be treated as official tax, banking, utility or professional systems.
+## Important disclaimer
+Calculators provide estimates based on user-entered assumptions. They are not official tax, banking, utility, investment, legal, medical, engineering or professional systems. Verify important decisions with the relevant official source or qualified professional.
+
+## Brand
+**Chanvika Projects — Powered by C & N Creations**

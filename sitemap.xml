@@ -1,156 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/faq.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/privacy-policy.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/terms-of-use.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/disclaimer.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/age.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/bill-split.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/break-even.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/commission.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/compound-interest.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/discount.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/electricity-bill.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/emi.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/fuel-cost.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gst.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/inflation.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/jewellery-price.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/markup.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/percentage.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/profit-margin.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/savings-goal.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/simple-interest.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/sip.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/tip.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/unit-price.html</loc>
-  </url>
-
-  <url>
-    <loc>https://cncreations.github.io/Chanvika-Calculator/calculators/wedding-budget.html</loc>
-  </url>
-
-  <url>
-  <loc>https://cncreations.github.io/Chanvika-Calculator/contact.html</loc>
-</url>
-
-  <url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/loan-eligibility.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/home-loan-emi.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/net-worth.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/taxable-income.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/cash-flow.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/break-even-sales.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/roas.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/discount-margin.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/rent-vs-buy.html</loc>
-</url>
-  
-<url>
-<loc>https://cncreations.github.io/Chanvika-Calculator/calculators/business-loan-emi.html</loc>
-</url>
-  
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/disclaimer.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/privacy-policy.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/terms-of-use.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/advance-tax-planner.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/age.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/asset-allocation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/average.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/bill-split.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/bond-yield.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/break-even-sales.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/break-even.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/business-loan-emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/capacity-utilization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/capital-gains.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/car-loan-emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/cash-flow.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/catering-quantity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/cogs.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/commission.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/compound-interest.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/debt-to-income.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/decoration-budget.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/discount-margin.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/discount.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/down-payment.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/electricity-bill.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/electricity-unit-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/emergency-fund.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/event-cost-per-guest.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/event-ticket-break-even.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/flight-cost-per-km.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/fuel-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/fuel-efficiency-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/fuel-needed.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/future-value.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gold-loan-emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gross-profit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gst-inclusive-exclusive.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gst-margin.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/gst.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/guest-rsvp.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/home-loan-emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/hra-rent.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/income-tax-slab.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/inflation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/interest-only-loan.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/inventory-days.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/inventory-turnover.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/jewellery-price.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/labor-productivity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/loan-eligibility.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/loan-prepayment.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/lumpsum.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/machine-hour-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/markup.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/mileage.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/monthly-budget.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/net-profit.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/net-worth.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/oee.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/paint-quantity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/percentage.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/personal-loan-emi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/portfolio-return.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/power-consumption.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/present-value.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/price-decrease.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/price-increase.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/production-capacity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/profit-margin.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/quantity-for-money.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/quantity-price.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/ratio.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/refinance-savings.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/rent-per-square-foot.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/rent-vs-buy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/reorder-point.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/revenue.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/roas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/rule-of-72.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/salary-breakup.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/savings-goal.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/savings-rate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/simple-interest.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/sip-return-required.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/sip-step-up.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/sip.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/solar-savings.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/stock-value.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/taxable-income.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/tds-percentage.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/tile-quantity.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/tip.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/toll-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/travel-cost-per-person.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/trip-budget.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/unit-price.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/waste-percentage.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/water-tank.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/wedding-budget.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/wedding-savings.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/wedding-venue-budget.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cncreations.github.io/Chanvika-Calculator/calculators/weighted-average.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

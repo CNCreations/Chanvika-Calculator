@@ -1,19 +1,39 @@
 {
   "name": "Chanvika Calculator",
   "short_name": "Chanvika Calculator",
-  "description": "Free smart calculators for everyday India, including business, money, finance, shopping and everyday calculators.",
+  "description": "101 free practical calculators for everyday India, shops, business, finance, investment, tax, travel, home, events and industrial planning.",
   "lang": "en-IN",
   "dir": "ltr",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f7f8fb",
-  "theme_color": "#4f46e5",
+  "background_color": "#fff9ed",
+  "theme_color": "#c98722",
   "icons": [
-    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"./icons/icon-192-maskable.png","sizes":"192x192","type":"image/png","purpose":"maskable"},
-    {"src":"./icons/icon-512-maskable.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
